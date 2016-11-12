@@ -43,12 +43,13 @@ if(test_index != -1):
 XT =[ XData[i][1:] for i in range(0,len(XData))]
 [ GlobalAttrDict, ExampleDict, TestDict] = dt_func.CreateGlobalDict(XT, YData, XTest, YTest, 1)
 
+sz = len(XT[0])
 ##BreakDown to N decision trees of k features
 #NList = [5,10,30,100]
-NList=[5]
+NList=[5,100]
 
 for n in NList:
-	k = math.ceil(math.log(n,2))
+	k = math.ceil(math.log(sz,2))
 	TreeList = dict(dict([]))
 	for ntree in range(0,1): ## working on each tree
 		localTree = dict([])
