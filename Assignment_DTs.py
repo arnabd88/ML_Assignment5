@@ -4,7 +4,7 @@ import re
 import copy
 import dt_func
 import svm_func
-#import graph
+import graph
 import math
 import numpy
 
@@ -46,23 +46,46 @@ XT =[ XData[i][1:] for i in range(0,len(XData))]
 sz = len(XT[0])
 ##BreakDown to N decision trees of k features
 #NList = [5,10,30,100]
-NList=[5,100]
+NList=[5]
 
+TreeForest = []
 for n in NList:
 	k = math.ceil(math.log(sz,2))
-	TreeList = dict(dict([]))
-	for ntree in range(0,1): ## working on each tree
-		localTree = dict([])
-		## prune the feature list and the example set
-		permIndex = numpy.random.permutation(len(GlobalAttrDict['_AttrOrder_']))
-		permIndex = permIndex[0:k]
-		localTree['Feature'] = []
-		for k in permIndex:
-			localTree['Feature'].append(GlobalAttrDict['_AttrOrder_'][k])
-		ExampleList = dt_func.pruneExampleList(ExampleDict, localTree['Feature'])
-		TestList = dt_func.pruneExampleList(TestDict, localTree['Feature'])
-		Root = dt_func.decideRoot(ExampleList, localTree['Feature'], GlobalAttrDict)
-		print "Root: ",Root
+	M = math.ceil(float(len(XT)/n))
+	for ntree in range(0,n):
+		selMExamples = numpy.random.permutation(len(XT))[0:M]
+		ExampleList = dt_func.sampleExampleList(ExampleDict, selMExamples)
+		Root = dt_func.decideRoot(ExampleList, GlobalAttrDict,k)
+		gRoot = graph.graph(Root, 'ROOT', ExampleList, GlobalAttrDict, 0, -1, k)
+		sflag = gRoot.ID3()
+		TreeForest.append(gRoot)
+		y = dt_func.Validate( TreeForest[ntree], TestDict, TestDict['Result'])
+		print len(y)
+
+##--- Create the input dataSet for SVM ---
+
+
+## for n in NList:
+## 	k = math.ceil(math.log(sz,2))
+## 	TreeList = dict(dict([]))
+## 	for ntree in range(0,1): ## working on each tree
+## 		localTree = dict([])
+## 		## prune the feature list and the example set
+## 		permIndex = numpy.random.permutation(len(GlobalAttrDict['_AttrOrder_']))
+## 		permIndex = permIndex[0:k]
+## 		localTree['Feature'] = []
+## 		for k in permIndex:
+## 			f = GlobalAttrDict['_AttrOrder_'][k]
+## 			localTree['Feature'].append(f)
+## 			localTree[f] = GlobalAttrDict[f]
+## 		localTree['classes'] = GlobalAttrDict['classes']
+## 		ExampleList = dt_func.pruneExampleList(ExampleDict, localTree['Feature'])
+## 		TestList = dt_func.pruneExampleList(TestDict, localTree['Feature'])
+## 		Root = dt_func.decideRoot(ExampleList, localTree)
+## 		print "Root: ",Root
+## 		gRoot = graph.graph(Root, 'ROOT', ExampleList, localTree, 0, -1)
+## 		sFlag = gRoot.ID3()
+## 		localTree['TreePointer']=gRoot
 		
 
 

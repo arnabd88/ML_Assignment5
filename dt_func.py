@@ -56,7 +56,21 @@ def CreateGlobalDict( exdata, exlabel, tdata, tlabel , cont):
 			
 		
 	return [AttrDict, ExampleDict, TestDict]
-	
+
+
+def sampleExampleList(ExampleDict, M):
+	exDict = dict([]) 
+	if (len(ExampleDict['Result']) <= len(M)):
+		return ExampleDict
+	else:
+		for item in ExampleDict.keys():
+			exDict[item] = []
+			for m in M:
+				exDict[item].append(ExampleDict[item][m])
+	return exDict
+			
+		
+
 	
 def pruneExampleList(ExampleDict, Features):
     exDict = copy.deepcopy(ExampleDict)
@@ -65,7 +79,7 @@ def pruneExampleList(ExampleDict, Features):
 			del exDict[k]
     return exDict
 
-def Entrophy(Example, Features, AttrDict):
+def Entrophy(Example, AttrDict):
   	res = AttrDict['classes']
 	LabelCount = 0.0
 	LabelCount_0_Count = 0.0
@@ -85,7 +99,7 @@ def Entrophy(Example, Features, AttrDict):
 		
   
 
-def getIG(Example, kfeatures, Attr, feat, Entrophy_S):
+def getIG(Example, Attr, feat, Entrophy_S):
   	AvgEnt = 0.0
 	values_feat = Attr[feat]
 	sampleExList = Example[feat]
@@ -95,19 +109,22 @@ def getIG(Example, kfeatures, Attr, feat, Entrophy_S):
 		for i in range(0,len(sampleExList)):
 			if(v == sampleExList[i]):
 				localExampleDict['Result'].append(Example['Result'][i])
-		tempEntrophyRet = Entrophy(localExampleDict, kfeatures, Attr);
+		tempEntrophyRet = Entrophy(localExampleDict, Attr);
 		AvgEnt = AvgEnt + (tempEntrophyRet[2]/len(sampleExList)) * tempEntrophyRet[3]
 	return (Entrophy_S - AvgEnt)
 
 
-def decideRoot(ExampleDict, kfeatures, AttrDict):
-  	Features = copy.deepcopy(kfeatures)
-	print "Features: ", kfeatures
+def decideRoot(ExampleDict, AttrDict, k):
 	BestFeature = ''
 	BestFeatureValue = 0
-	E_S = Entrophy(ExampleDict, Features, AttrDict)
-	for feat in Features:
-		IGv = getIG(ExampleDict, kfeatures, AttrDict, feat, E_S[3])
+	E_S = Entrophy(ExampleDict, AttrDict)
+	if(len(AttrDict['_AttrOrder_']) > k):
+		indexList = numpy.random.permutation(len(AttrDict['_AttrOrder_']))[0:k]
+	else:
+		indexList = AttrDict['_AttrOrder_']
+	for f in indexList:
+		feat = AttrDict['_AttrOrder_'][f]
+		IGv = getIG(ExampleDict, AttrDict, feat, E_S[3])
 		if(IGv >= BestFeatureValue):
 			BestFeatureValue = IGv ;
 			BestFeature = feat;
@@ -115,6 +132,22 @@ def decideRoot(ExampleDict, kfeatures, AttrDict):
 
 
 
+def Validate(dt,  vectDict, Result):
+	testV = dict([])
+	CollectResult = []
+	for x in range(0,len(vectDict[vectDict.keys()[0]])):
+		for w in range(0,len(vectDict.keys())):
+			if(vectDict.keys()[w] != 'Result'):
+				testV[vectDict.keys()[w]] = vectDict[vectDict.keys()[w]][x]
+
+		pres = dt.predictResult(testV)
+		if(pres != Result[x]):
+			CollectResult.append(testV)
+#	if(len(CollectResult) == 0):
+#		print "Validation Successful: Accurate Prediction"
+#	else:
+#		print "Inaccuracy in Prediction"
+	return CollectResult
 
 	#if(cont==1) : ## if data is continuous , performs the splits
 	#	#for i in range(0,len(AttrDict['_AttrOrder_'])):
