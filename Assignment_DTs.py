@@ -63,6 +63,32 @@ for n in NList:
 		print len(y)
 
 ##--- Create the input dataSet for SVM ---
+SVM_XDATA = []
+TEST_XDATA = []
+for i in range(0,len(XData)):
+	##--create a test-vector as below --
+	testV = dict([])
+	for f in range(0,len(GlobalAttrDict['_AttrOrder_'])):
+		testV[GlobalAttrDict['_AttrOrder_'][f]] = ExampleDict[GlobalAttrDict['_AttrOrder_'][f]][i]
+	SVM_XDATA.append([1] + [TreeForest[n].predictResult(testV) for n in range(0,len(TreeForest))])
+print len(SVM_XDATA), len(YData)
+for i in range(0,len(XTest)):
+	##--create a test-vector as below --
+	testV = dict([])
+	for f in range(0,len(GlobalAttrDict['_AttrOrder_'])):
+		testV[GlobalAttrDict['_AttrOrder_'][f]] = TestDict[GlobalAttrDict['_AttrOrder_'][f]][i]
+	TEST_XDATA.append([1] + [TreeForest[n].predictResult(testV) for n in range(0,len(TreeForest))])
+
+wvecLearn = svm_func.SVM(SVM_XDATA, YData, 1, 0.001, 50, len(SVM_XDATA[0]))
+#print wvecLearn
+mistakeCount = svm_func.SVM_TEST(TEST_XDATA, YTest, wvecLearn)
+mistakeCountTrain = svm_func.SVM_TEST(SVM_XDATA, YData, wvecLearn)
+print "MistakeCount = ", mistakeCount
+print "MistakeCountTrain = ", mistakeCountTrain
+print "TestSize = ", len(XTest)
+print "DataSize = ", len(XData)
+
+		
 
 
 ## for n in NList:

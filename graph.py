@@ -101,7 +101,6 @@ class graph:
 
 
 	def predictResult(self, testV):
-		print "testv: ", testV
 		if( self.Type=='leaf' and len(self.decision.keys())==1 ):
 			return self.decision.keys()[0]
 		else :		
