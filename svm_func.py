@@ -96,11 +96,21 @@ def SVM (xdata, ydata, c, gamma, epochs, vecSize):
 def SVM_TEST( xdata, ydata, wvec ):
 	mistakeCounter = 0
 	wtxSum = 0
+	TruePos = 0.0
+	FalsePos = 0.0
+	FalseNeg = 0.0
 	for i in range(0,len(xdata)):
 		xvec = xdata[i]
 		ylabel = ydata[i]
 		#print ylabel*numpy.dot(wvec,xvec)
 		if( numpy.dot(wvec, xvec)*ylabel < 0 ):
 			mistakeCounter = mistakeCounter+1
-	return mistakeCounter
+			if ( numpy.dot(wvec, xvec) < 0 and ylabel >= 0): ## False negative
+				FalseNeg = FalseNeg + 1.0
+			elif ( numpy.dot(wvec, xvec) >= 0 and ylabel < 0): ## False positive
+				FalsePos = FalsePos + 1
+		else:
+			if(numpy.dot(wvec,xvec) >=0 and ylabel >=0): #true Positive
+				TruePos = TruePos + 1.0 
+	return [TruePos, FalsePos, FalseNeg, mistakeCounter]
 		

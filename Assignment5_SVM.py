@@ -76,11 +76,11 @@ def Run_Q3_2():
 				NewXData = [XData[i] for i in range(0,len(XData)) if(i<k*blockSize or i>=(k+1)*blockSize)]
 				NewYLabel = [YData[i] for i in range(0,len(XData)) if(i<k*blockSize or i>=(k+1)*blockSize)]
 				wvecLearn = svm_func.SVM(NewXData, NewYLabel, c, g, 50, len(NewXData[0]))
-				trainMistake = svm_func.SVM_TEST(NewXData,NewYLabel, wvecLearn)
-				testMistake = svm_func.SVM_TEST(NewXTest, NewYTestLabel, wvecLearn)
-				print 'TrainMistake = ', trainMistake
-				testAcc = testAcc + (float(len(NewXTest) - testMistake)/len(NewXTest))*100
-				trainAcc = trainAcc + (float(len(NewXData) - trainMistake)/len(NewXData))*100
+				##TestStruct = [TruePos, FalsePos, FalseNeg, mistakeCounter]
+				TrainingStruct = svm_func.SVM_TEST(NewXData,NewYLabel, wvecLearn)
+				TestStruct = svm_func.SVM_TEST(NewXTest, NewYTestLabel, wvecLearn)
+				testAcc = testAcc + (float(len(NewXTest) - TestStruct[3])/len(NewXTest))*100
+				trainAcc = trainAcc + (float(len(NewXData) - TrainingStruct[3])/len(NewXData))*100
 			avgtrainacc = float(trainAcc)/foldValue
 			print "avgtrain = ", avgtrainacc
 			avgtestacc = float(testAcc)/foldValue
@@ -103,9 +103,9 @@ def Run_Q3_2():
 	wvecLearn = svm_func.SVM(XData, YData, bestC, bestG, 50, len(XData[0]))
 
 	##------- Initiate Testing -------------##
-	mainTrainMistake = svm_func.SVM_TEST(XData, YData, wvecLearn)
-	mainTestMistake = svm_func.SVM_TEST(XTest, YTest, wvecLearn)
-	print mainTrainMistake, len(XTest)
+	TrainingStruct = svm_func.SVM_TEST(XData, YData, wvecLearn)
+	TestStruct = svm_func.SVM_TEST(XTest, YTest, wvecLearn)
+	print TrainingStruct[3], len(XTest)
 	print "========== Report for Q3_2 (k=5) fold validation ================="
 	for c in range(0,len(CList)):
 		for g in range(0,len(GList)):
@@ -116,10 +116,26 @@ def Run_Q3_2():
 	print "Best-C = ", bestC
 	print "Best-Gamma = ", bestG
 	print "len-XTest", len(XTest)
-	print "Training-Accuracy = ",  ((len(XData) - mainTrainMistake)/float((len(XData))))*100 , "%"
-	print "mainTrainMistake: ", mainTrainMistake
-	print "mainTestMistake: ", mainTestMistake
-	print "Test-Accuracy= ",  ((len(XTest) - mainTestMistake)/(float((len(XTest)))))*100, "%"
+
+	##----- Report for the Test on the training data -----##
+	PrecisionScoreTrain = TrainingStruct[0]/float(TrainingStruct[0] + TrainingStruct[1])
+	RecallTrain = TrainingStruct[0]/float(TrainingStruct[0] + TrainingStruct[2])
+	F1Train = (2*PrecisionScoreTrain*RecallTrain)/float(PrecisionScoreTrain + RecallTrain)
+	print "Training-Mistake Count: ", TrainingStruct[3]
+	print "Training-Accuracy = ",  ((len(XData) - TrainingStruct[3])/float((len(XData))))*100 , "%"
+	print "Training - Precision Score = ", PrecisionScoreTrain
+	print "Training - Recall Score = ", RecallTrain
+	print "Training - F1-Score = ", F1Train
+
+	##----- Report For the Test Data -----##
+	PrecisionScoreTest = TestStruct[0]/float(TestStruct[0] + TestStruct[1])
+	Recalltest = TestStruct[0]/float(TestStruct[0] + TestStruct[2])
+	F1test = (2*PrecisionScoreTest*Recalltest)/float(PrecisionScoreTest + Recalltest)
+	print "Test-Mistake Count: ", TestStruct[3]
+	print "Test-Accuracy= ",  ((len(XTest) - TestStruct[3])/(float((len(XTest)))))*100, "%"
+	print "Test - Precision Score = ", PrecisionScoreTest 
+	print "Test - Recall Score = ", RecallTest
+	print "Test - F1-Score = ", F1test
 	print "========= End Report =============================="
 
 	
