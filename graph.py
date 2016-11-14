@@ -48,7 +48,7 @@ class graph:
 				lc0 = lc0+1.0
 			else:
 				lc1 = lc1+1.0
-		print "Reached here atleast"
+		#print "Reached here atleast"
 		if(lc0 >= lc1):
 			return res[0]
 		else:

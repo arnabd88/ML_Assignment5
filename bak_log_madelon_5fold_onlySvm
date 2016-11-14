@@ -1,0 +1,916 @@
+501
+118751942.0
+C = G =  1 1
+C = G =  1 1
+C = G =  1 1
+C = G =  1 1
+C = G =  1 1
+avgtrain =  63.175
+avgtest =  55.0
+Current-C = 1 Current-G = 1
+Best-C =  1  Best-G =  1 
+
+
+C = G =  1 0.1
+C = G =  1 0.1
+C = G =  1 0.1
+C = G =  1 0.1
+C = G =  1 0.1
+avgtrain =  60.0875
+avgtest =  53.1
+Current-C = 1 Current-G = 0.1
+Best-C =  1  Best-G =  1 
+
+
+C = G =  1 0.01
+C = G =  1 0.01
+C = G =  1 0.01
+C = G =  1 0.01
+C = G =  1 0.01
+avgtrain =  58.75
+avgtest =  53.2
+Current-C = 1 Current-G = 0.01
+Best-C =  1  Best-G =  1 
+
+
+C = G =  1 0.001
+C = G =  1 0.001
+C = G =  1 0.001
+C = G =  1 0.001
+C = G =  1 0.001
+avgtrain =  53.6
+avgtest =  50.0
+Current-C = 1 Current-G = 0.001
+Best-C =  1  Best-G =  1 
+
+
+C = G =  1 0.0001
+C = G =  1 0.0001
+C = G =  1 0.0001
+C = G =  1 0.0001
+C = G =  1 0.0001
+avgtrain =  57.4
+avgtest =  50.95
+Current-C = 1 Current-G = 0.0001
+Best-C =  1  Best-G =  1 
+
+
+C = G =  1 10
+C = G =  1 10
+C = G =  1 10
+C = G =  1 10
+C = G =  1 10
+avgtrain =  58.025
+avgtest =  52.9
+Current-C = 1 Current-G = 10
+Best-C =  1  Best-G =  1 
+
+
+C = G =  1 100
+C = G =  1 100
+C = G =  1 100
+C = G =  1 100
+C = G =  1 100
+avgtrain =  53.525
+avgtest =  48.8
+Current-C = 1 Current-G = 100
+Best-C =  1  Best-G =  1 
+
+
+C = G =  2 1
+C = G =  2 1
+C = G =  2 1
+C = G =  2 1
+C = G =  2 1
+avgtrain =  53.95
+avgtest =  50.5
+Current-C = 2 Current-G = 1
+Best-C =  1  Best-G =  1 
+
+
+C = G =  2 0.1
+C = G =  2 0.1
+C = G =  2 0.1
+C = G =  2 0.1
+C = G =  2 0.1
+avgtrain =  53.55
+avgtest =  48.85
+Current-C = 2 Current-G = 0.1
+Best-C =  1  Best-G =  1 
+
+
+C = G =  2 0.01
+C = G =  2 0.01
+C = G =  2 0.01
+C = G =  2 0.01
+C = G =  2 0.01
+avgtrain =  59.925
+avgtest =  53.55
+Current-C = 2 Current-G = 0.01
+Best-C =  1  Best-G =  1 
+
+
+C = G =  2 0.001
+C = G =  2 0.001
+C = G =  2 0.001
+C = G =  2 0.001
+C = G =  2 0.001
+avgtrain =  56.625
+avgtest =  53.65
+Current-C = 2 Current-G = 0.001
+Best-C =  1  Best-G =  1 
+
+
+C = G =  2 0.0001
+C = G =  2 0.0001
+C = G =  2 0.0001
+C = G =  2 0.0001
+C = G =  2 0.0001
+avgtrain =  56.8125
+avgtest =  54.35
+Current-C = 2 Current-G = 0.0001
+Best-C =  1  Best-G =  1 
+
+
+C = G =  2 10
+C = G =  2 10
+C = G =  2 10
+C = G =  2 10
+C = G =  2 10
+avgtrain =  55.2625
+avgtest =  52.85
+Current-C = 2 Current-G = 10
+Best-C =  1  Best-G =  1 
+
+
+C = G =  2 100
+C = G =  2 100
+C = G =  2 100
+C = G =  2 100
+C = G =  2 100
+avgtrain =  60.25
+avgtest =  53.55
+Current-C = 2 Current-G = 100
+Best-C =  1  Best-G =  1 
+
+
+C = G =  0.5 1
+C = G =  0.5 1
+C = G =  0.5 1
+C = G =  0.5 1
+C = G =  0.5 1
+avgtrain =  67.0
+avgtest =  56.05
+Current-C = 0.5 Current-G = 1
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+avgtrain =  60.55
+avgtest =  54.9
+Current-C = 0.5 Current-G = 0.1
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+avgtrain =  64.05
+avgtest =  54.75
+Current-C = 0.5 Current-G = 0.01
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+avgtrain =  61.8875
+avgtest =  54.05
+Current-C = 0.5 Current-G = 0.001
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+avgtrain =  56.3
+avgtest =  53.8
+Current-C = 0.5 Current-G = 0.0001
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.5 10
+C = G =  0.5 10
+C = G =  0.5 10
+C = G =  0.5 10
+C = G =  0.5 10
+avgtrain =  56.625
+avgtest =  53.0
+Current-C = 0.5 Current-G = 10
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.5 100
+C = G =  0.5 100
+C = G =  0.5 100
+C = G =  0.5 100
+C = G =  0.5 100
+avgtrain =  61.4125
+avgtest =  52.75
+Current-C = 0.5 Current-G = 100
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.25 1
+C = G =  0.25 1
+C = G =  0.25 1
+C = G =  0.25 1
+C = G =  0.25 1
+avgtrain =  63.1625
+avgtest =  54.7
+Current-C = 0.25 Current-G = 1
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+avgtrain =  65.075
+avgtest =  54.0
+Current-C = 0.25 Current-G = 0.1
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+avgtrain =  62.65
+avgtest =  53.0
+Current-C = 0.25 Current-G = 0.01
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+avgtrain =  57.375
+avgtest =  52.55
+Current-C = 0.25 Current-G = 0.001
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+avgtrain =  59.2
+avgtest =  54.95
+Current-C = 0.25 Current-G = 0.0001
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.25 10
+C = G =  0.25 10
+C = G =  0.25 10
+C = G =  0.25 10
+C = G =  0.25 10
+avgtrain =  60.475
+avgtest =  53.55
+Current-C = 0.25 Current-G = 10
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.25 100
+C = G =  0.25 100
+C = G =  0.25 100
+C = G =  0.25 100
+C = G =  0.25 100
+avgtrain =  61.525
+avgtest =  52.75
+Current-C = 0.25 Current-G = 100
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.0625 1
+C = G =  0.0625 1
+C = G =  0.0625 1
+C = G =  0.0625 1
+C = G =  0.0625 1
+avgtrain =  55.6875
+avgtest =  54.1
+Current-C = 0.0625 Current-G = 1
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+avgtrain =  56.65
+avgtest =  54.55
+Current-C = 0.0625 Current-G = 0.1
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+avgtrain =  58.975
+avgtest =  54.3
+Current-C = 0.0625 Current-G = 0.01
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+avgtrain =  65.3875
+avgtest =  55.1
+Current-C = 0.0625 Current-G = 0.001
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+avgtrain =  60.1125
+avgtest =  51.95
+Current-C = 0.0625 Current-G = 0.0001
+Best-C =  0.5  Best-G =  1 
+
+
+C = G =  0.0625 10
+C = G =  0.0625 10
+C = G =  0.0625 10
+C = G =  0.0625 10
+C = G =  0.0625 10
+avgtrain =  56.6375
+avgtest =  56.4
+Current-C = 0.0625 Current-G = 10
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  0.0625 100
+C = G =  0.0625 100
+C = G =  0.0625 100
+C = G =  0.0625 100
+C = G =  0.0625 100
+avgtrain =  55.65
+avgtest =  53.55
+Current-C = 0.0625 Current-G = 100
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  4 1
+C = G =  4 1
+C = G =  4 1
+C = G =  4 1
+C = G =  4 1
+avgtrain =  51.4875
+avgtest =  51.85
+Current-C = 4 Current-G = 1
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  4 0.1
+C = G =  4 0.1
+C = G =  4 0.1
+C = G =  4 0.1
+C = G =  4 0.1
+avgtrain =  51.4875
+avgtest =  49.85
+Current-C = 4 Current-G = 0.1
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  4 0.01
+C = G =  4 0.01
+C = G =  4 0.01
+C = G =  4 0.01
+C = G =  4 0.01
+avgtrain =  54.1375
+avgtest =  51.2
+Current-C = 4 Current-G = 0.01
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  4 0.001
+C = G =  4 0.001
+C = G =  4 0.001
+C = G =  4 0.001
+C = G =  4 0.001
+avgtrain =  50.9
+avgtest =  51.7
+Current-C = 4 Current-G = 0.001
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  4 0.0001
+C = G =  4 0.0001
+C = G =  4 0.0001
+C = G =  4 0.0001
+C = G =  4 0.0001
+avgtrain =  51.475
+avgtest =  49.6
+Current-C = 4 Current-G = 0.0001
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  4 10
+C = G =  4 10
+C = G =  4 10
+C = G =  4 10
+C = G =  4 10
+avgtrain =  52.375
+avgtest =  51.1
+Current-C = 4 Current-G = 10
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  4 100
+C = G =  4 100
+C = G =  4 100
+C = G =  4 100
+C = G =  4 100
+avgtrain =  55.8125
+avgtest =  53.4
+Current-C = 4 Current-G = 100
+Best-C =  0.0625  Best-G =  10 
+
+
+C = G =  0.01 1
+C = G =  0.01 1
+C = G =  0.01 1
+C = G =  0.01 1
+C = G =  0.01 1
+avgtrain =  58.125
+avgtest =  57.65
+Current-C = 0.01 Current-G = 1
+Best-C =  0.01  Best-G =  1 
+
+
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+avgtrain =  57.2625
+avgtest =  52.6
+Current-C = 0.01 Current-G = 0.1
+Best-C =  0.01  Best-G =  1 
+
+
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+avgtrain =  59.4625
+avgtest =  55.45
+Current-C = 0.01 Current-G = 0.01
+Best-C =  0.01  Best-G =  1 
+
+
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+avgtrain =  63.025
+avgtest =  58.95
+Current-C = 0.01 Current-G = 0.001
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+avgtrain =  59.9125
+avgtest =  56.4
+Current-C = 0.01 Current-G = 0.0001
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.01 10
+C = G =  0.01 10
+C = G =  0.01 10
+C = G =  0.01 10
+C = G =  0.01 10
+avgtrain =  57.4125
+avgtest =  57.1
+Current-C = 0.01 Current-G = 10
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.01 100
+C = G =  0.01 100
+C = G =  0.01 100
+C = G =  0.01 100
+C = G =  0.01 100
+avgtrain =  56.2625
+avgtest =  54.3
+Current-C = 0.01 Current-G = 100
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.1 1
+C = G =  0.1 1
+C = G =  0.1 1
+C = G =  0.1 1
+C = G =  0.1 1
+avgtrain =  57.025
+avgtest =  54.05
+Current-C = 0.1 Current-G = 1
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+avgtrain =  58.9375
+avgtest =  53.7
+Current-C = 0.1 Current-G = 0.1
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+avgtrain =  61.825
+avgtest =  53.0
+Current-C = 0.1 Current-G = 0.01
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+avgtrain =  56.8
+avgtest =  52.5
+Current-C = 0.1 Current-G = 0.001
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+avgtrain =  64.4
+avgtest =  52.85
+Current-C = 0.1 Current-G = 0.0001
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.1 10
+C = G =  0.1 10
+C = G =  0.1 10
+C = G =  0.1 10
+C = G =  0.1 10
+avgtrain =  56.75
+avgtest =  53.35
+Current-C = 0.1 Current-G = 10
+Best-C =  0.01  Best-G =  0.001 
+
+
+C = G =  0.1 100
+C = G =  0.1 100
+C = G =  0.1 100
+C = G =  0.1 100
+C = G =  0.1 100
+avgtrain =  55.975
+avgtest =  54.85
+Current-C = 0.1 Current-G = 100
+Best-C =  0.01  Best-G =  0.001 
+
+
+0.01 0.001
+[[63.175, 60.0875, 58.75, 53.6, 57.4, 58.025, 53.525], [53.95, 53.55, 59.925, 56.625, 56.8125, 55.2625, 60.25], [67.0, 60.55, 64.05, 61.8875, 56.3, 56.625, 61.4125], [63.1625, 65.075, 62.65, 57.375, 59.2, 60.475, 61.525], [55.6875, 56.65, 58.975, 65.3875, 60.1125, 56.6375, 55.65], [51.4875, 51.4875, 54.1375, 50.9, 51.475, 52.375, 55.8125], [58.125, 57.2625, 59.4625, 63.025, 59.9125, 57.4125, 56.2625], [57.025, 58.9375, 61.825, 56.8, 64.4, 56.75, 55.975]]
+796 600
+========== Report for Q3_2 (k=5) fold validation =================
+======== C =  1 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  63.175 %
+Average Test for pair(c,g) Accuracy =  55.0 %
+
+
+======== C =  1 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  60.0875 %
+Average Test for pair(c,g) Accuracy =  53.1 %
+
+
+======== C =  1 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  58.75 %
+Average Test for pair(c,g) Accuracy =  53.2 %
+
+
+======== C =  1 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  53.6 %
+Average Test for pair(c,g) Accuracy =  50.0 %
+
+
+======== C =  1 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  57.4 %
+Average Test for pair(c,g) Accuracy =  50.95 %
+
+
+======== C =  1 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  58.025 %
+Average Test for pair(c,g) Accuracy =  52.9 %
+
+
+======== C =  1 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  53.525 %
+Average Test for pair(c,g) Accuracy =  48.8 %
+
+
+======== C =  2 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  53.95 %
+Average Test for pair(c,g) Accuracy =  50.5 %
+
+
+======== C =  2 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  53.55 %
+Average Test for pair(c,g) Accuracy =  48.85 %
+
+
+======== C =  2 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  59.925 %
+Average Test for pair(c,g) Accuracy =  53.55 %
+
+
+======== C =  2 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  56.625 %
+Average Test for pair(c,g) Accuracy =  53.65 %
+
+
+======== C =  2 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  56.8125 %
+Average Test for pair(c,g) Accuracy =  54.35 %
+
+
+======== C =  2 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  55.2625 %
+Average Test for pair(c,g) Accuracy =  52.85 %
+
+
+======== C =  2 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  60.25 %
+Average Test for pair(c,g) Accuracy =  53.55 %
+
+
+======== C =  0.5 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  67.0 %
+Average Test for pair(c,g) Accuracy =  56.05 %
+
+
+======== C =  0.5 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  60.55 %
+Average Test for pair(c,g) Accuracy =  54.9 %
+
+
+======== C =  0.5 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  64.05 %
+Average Test for pair(c,g) Accuracy =  54.75 %
+
+
+======== C =  0.5 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  61.8875 %
+Average Test for pair(c,g) Accuracy =  54.05 %
+
+
+======== C =  0.5 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  56.3 %
+Average Test for pair(c,g) Accuracy =  53.8 %
+
+
+======== C =  0.5 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  56.625 %
+Average Test for pair(c,g) Accuracy =  53.0 %
+
+
+======== C =  0.5 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  61.4125 %
+Average Test for pair(c,g) Accuracy =  52.75 %
+
+
+======== C =  0.25 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  63.1625 %
+Average Test for pair(c,g) Accuracy =  54.7 %
+
+
+======== C =  0.25 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  65.075 %
+Average Test for pair(c,g) Accuracy =  54.0 %
+
+
+======== C =  0.25 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  62.65 %
+Average Test for pair(c,g) Accuracy =  53.0 %
+
+
+======== C =  0.25 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  57.375 %
+Average Test for pair(c,g) Accuracy =  52.55 %
+
+
+======== C =  0.25 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  59.2 %
+Average Test for pair(c,g) Accuracy =  54.95 %
+
+
+======== C =  0.25 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  60.475 %
+Average Test for pair(c,g) Accuracy =  53.55 %
+
+
+======== C =  0.25 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  61.525 %
+Average Test for pair(c,g) Accuracy =  52.75 %
+
+
+======== C =  0.0625 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  55.6875 %
+Average Test for pair(c,g) Accuracy =  54.1 %
+
+
+======== C =  0.0625 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  56.65 %
+Average Test for pair(c,g) Accuracy =  54.55 %
+
+
+======== C =  0.0625 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  58.975 %
+Average Test for pair(c,g) Accuracy =  54.3 %
+
+
+======== C =  0.0625 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  65.3875 %
+Average Test for pair(c,g) Accuracy =  55.1 %
+
+
+======== C =  0.0625 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  60.1125 %
+Average Test for pair(c,g) Accuracy =  51.95 %
+
+
+======== C =  0.0625 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  56.6375 %
+Average Test for pair(c,g) Accuracy =  56.4 %
+
+
+======== C =  0.0625 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  55.65 %
+Average Test for pair(c,g) Accuracy =  53.55 %
+
+
+======== C =  4 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  51.4875 %
+Average Test for pair(c,g) Accuracy =  51.85 %
+
+
+======== C =  4 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  51.4875 %
+Average Test for pair(c,g) Accuracy =  49.85 %
+
+
+======== C =  4 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  54.1375 %
+Average Test for pair(c,g) Accuracy =  51.2 %
+
+
+======== C =  4 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  50.9 %
+Average Test for pair(c,g) Accuracy =  51.7 %
+
+
+======== C =  4 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  51.475 %
+Average Test for pair(c,g) Accuracy =  49.6 %
+
+
+======== C =  4 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  52.375 %
+Average Test for pair(c,g) Accuracy =  51.1 %
+
+
+======== C =  4 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  55.8125 %
+Average Test for pair(c,g) Accuracy =  53.4 %
+
+
+======== C =  0.01 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  58.125 %
+Average Test for pair(c,g) Accuracy =  57.65 %
+
+
+======== C =  0.01 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  57.2625 %
+Average Test for pair(c,g) Accuracy =  52.6 %
+
+
+======== C =  0.01 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  59.4625 %
+Average Test for pair(c,g) Accuracy =  55.45 %
+
+
+======== C =  0.01 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  63.025 %
+Average Test for pair(c,g) Accuracy =  58.95 %
+
+
+======== C =  0.01 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  59.9125 %
+Average Test for pair(c,g) Accuracy =  56.4 %
+
+
+======== C =  0.01 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  57.4125 %
+Average Test for pair(c,g) Accuracy =  57.1 %
+
+
+======== C =  0.01 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  56.2625 %
+Average Test for pair(c,g) Accuracy =  54.3 %
+
+
+======== C =  0.1 , Gamma =  1 ,==================
+Average Training for pair(c,g) Accuracy =  57.025 %
+Average Test for pair(c,g) Accuracy =  54.05 %
+
+
+======== C =  0.1 , Gamma =  0.1 ,==================
+Average Training for pair(c,g) Accuracy =  58.9375 %
+Average Test for pair(c,g) Accuracy =  53.7 %
+
+
+======== C =  0.1 , Gamma =  0.01 ,==================
+Average Training for pair(c,g) Accuracy =  61.825 %
+Average Test for pair(c,g) Accuracy =  53.0 %
+
+
+======== C =  0.1 , Gamma =  0.001 ,==================
+Average Training for pair(c,g) Accuracy =  56.8 %
+Average Test for pair(c,g) Accuracy =  52.5 %
+
+
+======== C =  0.1 , Gamma =  0.0001 ,==================
+Average Training for pair(c,g) Accuracy =  64.4 %
+Average Test for pair(c,g) Accuracy =  52.85 %
+
+
+======== C =  0.1 , Gamma =  10 ,==================
+Average Training for pair(c,g) Accuracy =  56.75 %
+Average Test for pair(c,g) Accuracy =  53.35 %
+
+
+======== C =  0.1 , Gamma =  100 ,==================
+Average Training for pair(c,g) Accuracy =  55.975 %
+Average Test for pair(c,g) Accuracy =  54.85 %
+
+
+Best-C =  0.01
+Best-Gamma =  0.001
+len-XTest 600
+Training-Mistake Count:  796
+Training-Accuracy =  60.2 %
+Training - Precision Score =  0.575332348597
+Training - Recall Score =  0.779
+Training - F1-Score =  0.661852166525
+Test-Mistake Count:  273
+Test-Accuracy=  54.5 %
+Test - Precision Score =  0.532687651332
+Test - Recall Score =  0.733333333333
+Test - F1-Score =  0.617110799439
+========= End Report ==============================

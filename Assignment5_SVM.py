@@ -13,7 +13,7 @@ test_index = -1 ## when testing required pass this switch
 foldValue = 0 ## required with fold index
 initRandom = 0 ## enable random bit. Default zero
 
-CList = [1,  pow(2,1), pow(2,-1), pow(2,-2), pow(2,-4), pow(2,2)]
+CList = [1,  pow(2,1), pow(2,-1), pow(2,-2), pow(2,-4), pow(2,2), 0.01, 0.1]
 GList = [1, 0.1, 0.01, 0.001, 0.0001, 10, 100]
 
 trainFileData=[]
@@ -41,19 +41,21 @@ if(test_index != -1):
 [XData, YData] = svm_func.parseInfo(trainFileData, trainFileLabel)
 [XTest, YTest] = svm_func.parseInfo(testFileData, testFileLabel)
 dsize = len(XTest[0])
-print dsize
-print numpy.dot(XTest[0],XTest[3])
+# print dsize
+# print numpy.dot(XTest[0],XTest[3])
 
 
 def Run_Q3_1():
 	wvecLearn = svm_func.SVM(XData, YData, 1, 0.001, 50, len(XData[0]))
 	#print wvecLearn
-	mistakeCount = svm_func.SVM_TEST(XTest, YTest, wvecLearn)
-	mistakeCountTrain = svm_func.SVM_TEST(XData, YData, wvecLearn)
-	print "MistakeCount = ", mistakeCount
-	print "MistakeCountTrain = ", mistakeCountTrain
-	print "TestSize = ", len(XTest)
-	print "DataSize = ", len(XData)
+	TestStruct = svm_func.SVM_TEST(XTest, YTest, wvecLearn)
+	TrainingStruct = svm_func.SVM_TEST(XData, YData, wvecLearn)
+	print "Test-Set size = ", len(XTest)
+	print "Data-Set Size = ", len(XData)
+	print "Test-MistakeCount = ", TestStruct[3]
+	print "Test-Accuracy = ", 100*float(len(XTest) - TestStruct[3])/len(XTest), "%"
+	print "Training-MistakeCount = ", TrainingStruct[3]
+	print "Training-Accuracy = ", 100*float(len(XData) - TrainingStruct[3])/len(XData), "%\n\n"
 
 
 def Run_Q3_2():
@@ -82,17 +84,17 @@ def Run_Q3_2():
 				testAcc = testAcc + (float(len(NewXTest) - TestStruct[3])/len(NewXTest))*100
 				trainAcc = trainAcc + (float(len(NewXData) - TrainingStruct[3])/len(NewXData))*100
 			avgtrainacc = float(trainAcc)/foldValue
-			print "avgtrain = ", avgtrainacc
+			#print "avgtrain = ", avgtrainacc
 			avgtestacc = float(testAcc)/foldValue
-			print "avgtest = ", avgtestacc
+			#print "avgtest = ", avgtestacc
 			GammaTrainAcc.append(avgtrainacc)
 			GammaTestAcc.append(avgtestacc)
 			if(MaxAccuracy < avgtestacc):
 				MaxAccuracy = avgtestacc
 				bestC = c
 				bestG = g
-			print "Current-C =", c, "Current-G =", g
-			print "Best-C = ", bestC, " Best-G = ", bestG, "\n\n"
+			#print "Current-C =", c, "Current-G =", g
+			#print "Best-C = ", bestC, " Best-G = ", bestG, "\n\n"
 		CGTrainAcc.append(GammaTrainAcc)
 		CGTestAcc.append(GammaTestAcc)
 
@@ -110,8 +112,8 @@ def Run_Q3_2():
 	for c in range(0,len(CList)):
 		for g in range(0,len(GList)):
 			print "======== C = ",CList[c],", Gamma = ",GList[g], ",=================="
-			print "Average Training for pair(c,g) Accuracy = ", CGTrainAcc[c][g],"%"
-			print "Average Test for pair(c,g) Accuracy = ", CGTestAcc[c][g],"%\n\n"
+			print "Average Training Accuracy for pair(c=",CList[c],",g=",GList[g],") Accuracy = ", CGTrainAcc[c][g],"%"
+			print "Average Test Accuracy for pair(c=",CList[c] ,",g=", GList[g], ") Accuracy = ", CGTestAcc[c][g],"%\n\n"
 ##	print "Average Test Accuracy = ", (len(XTest) - mainTestMistake)/(len(XTest)))
 	print "Best-C = ", bestC
 	print "Best-Gamma = ", bestG
