@@ -59,4 +59,80 @@
     $D_3$ has the greatest mistake bound. \newline
 
     \part{2c} A higher mistake bound indicates how well the classifier can fit the training data by making only this bounded number of mistakes. Hence, a low mistake bound will means the classifier fits the training data quickly. However, that provides no guarantees on the test data. Since the perceptron learns by making mistakes, hence a lower number of mistakes indicate that the learning performed by the perceptron has been less, and hence its predictive power intuitively reduces on the test data. To put it simply, a classifier learns less if it makes less number of mistakes because that is its only entry point towards learning and updates. Hence, the classifier with a higher mistakes bound is easier to learn and the one with a small mistake bound is difficult to learn. Thus the ranking in order of ease of ranking will be $D_3$, $D_1$, $D_2$ . \newline
+
+    \question{2}{Kernels}
+    \part{1a} Given valid kernels , $K_1(x,z)$ and $K_2(x,z)$, we need to show the product of these two kernels is also a kernel. For the defined space $x_1, x_2, \dots, x_n \in S$, we define the respective Gram matrices as: \newline
+    \[ C = \{c_{ij}\} = K_1(x_i, x_j) \]
+    \[ D = \{d_{ij}\} = K_2(x_i, x_j) \]
+    We define the newKernel $K=K_1 \times K_2$ as the product of these kernels , such that its Gram matrix looks like: \newline
+    \[ E = \{e_{ij}\} = \{c_{ij}\}\{d_{ij}\} = K(x_i, x_j) \]
+
+    Now, since the kernels $K_1$ and $K_2$ are spd, hence the elements are symmetric. So , we can write : \newline
+    \[ C = \{c_{ij}\} = K_1(x_i, x_j) = \{c_{ji}\} = K_1(x_j, x_i) \]
+    \[ D = \{d_{ij}\} = K_2(x_i, x_j) = \{d_{ji}\} = K_2(x_j, x_i) \]
+    Then , the corresponding elements in the matric for the new kernel, will be:
+    \[ \{e_{ji}\} = \{c_{ji}\}\{d_{ji}\} = \{c_{ij}\}\{d_{ij}\} = \{e_{ij}\}  \]
+    \textbf {Hence, the new kernel is also symmetric. }
+    Now, we need to prove it is symmetric positive definite. Let $u \in R^n$, we need to show $u^TEu \geq 0$. We can write:\newline
+    \begin{equation}
+    u^TEu = \sum_{ij} u_i u_j e_{ij} = \sum_{ij} u_i u_j c_{ij} d_{ij}
+    \end{equation}
+
+    Now, any matrix A that is non-singular, can be turned into a symmetric positive definite matrix by multiplication with its transpose, that is $A^TA$ is always symmetric positive definite. Since, the matrix A can be any matrix without any restriction other than being non-singular, this means that a given symmetric positive definite matrix can be considered to be formed as a product of  matrix and its transpose. So, we break down C as a product of a general non-singular matrix A and its transpose, and D as the product of a general non-singullar matrix B and its transpose. 
+    \[C = A^TA = \{c_{ij}\} = a_{i}^Ta_j = \sum_{k} a_{ik}a_{jk} \]
+    \[D = B^TB = \{d_{ij}\} = b_{i}^Tb_j = \sum_{l} b_{il}b_{jl} \]
+   Plugging these back to equation(1), we get: 
+    \[u^TEu = \sum_{ij} u_i u_j e_{ij} = \sum_{ij} u_i u_j \sum_{k} a_{ik}a_{jk} \sum_{l} b_{il}b_{jl} =\sum_{kl} \sum_{ij} u_i u_j a_{ik}a_{jk} b_{il}b_{jl}\] 
+    \[u^TEu = \sum_{kl} \sum_{ij} u_i u_j a_{ik} a_{jk} b_{il} b_{jl}\]
+    Since the i,j do not depend on each other, we can separate these as below
+    \[u^TEu = \sum_{kl} ( \sum_{i} u_i a_{ik} b_{il}) (\sum_{j} u_j a_{jk} b_{jl})\]
+    The terms for j are completely independent of i, and exactly identical to i, so we can remove the j terms and place the i terms as square which is greater than equal to 0
+    \[u^TEu = \sum_{kl} ( \sum_{i} u_i a_{ik} b_{il})^2 \geq 0\]
+    Hence, the gram matrix E is symmetric positive definite, which means K is also a kernel.(Proved). \newline
+
+    \part{2a} To Prove: Polynomial over a kernel constructed using positive coefficients is also a kernel.\newline
+    If we can show that the sum of kernels with positive coefficients is a kernel, then using this result and the result of previous question(2.1.a), we can conclude that Polynomial over a kernel is also a kernel. \newline
+    Given $K_1(x,z)$ and $K_2(x,z)$ are kernels, we define $K(x,z) = \alpha K_1(x,z) + \beta K_2(x,z)$ and show that K is a kernel. \newline
+    Suppose $K_1$ has its feature map, $\phi_1$, such that it is defined as $K_1(x,z) = \phi_1^T(x)\phi_1(z)$.
+    Suppose $K_2$ has its feature map, $\phi_2$, such that it is defined as $K_1(x,z) = \phi_2^T(x)\phi_2(z)$. Then we have , \newline
+    \[K(x,z) = \alpha K_1(x,z) + \beta K_2(x,z) = <\sqrt[2]{\alpha}\phi_1(x), \sqrt[2]{\alpha}\phi_1(z)> + <\sqrt[2]{\beta}\phi_1(x), \sqrt[2]{\beta}\phi_1(z)>\]
+    \[K(x,z) = <[\sqrt[2]{\alpha}\phi_1(x), \sqrt[2]{\beta}\phi_2(x)], [\sqrt[2]{\alpha}\phi_1(z), \sqrt[2]{\beta}\phi_2(z)]>\]
+
+    Which means $K(x,z)$ can be expresses as an inner product . Hence, K is an kernel.
+    Next, when we have a polynomial over a kernel constrcuted using positive coefficients, then the terms of the polynomial are product of kernels and these products are summed up to produce the final polynomial. Since, we have already proved that the product of kernels is a kernel, and sum of kernels with positive(else $\sqrt[2]{\alpha}$ will be imaginary) coefficients are kernels, hence overall it is a kernel. (Proved). \newline
+
+    \part{2} Given two examples $x \in R^2$ and $z \in R^2$, \textbf {Prove} the following is a kernel.
+    \[K(x,z) = 15(x^Tz)^2 \exp(-||x-z||^2)\]
+    Let $K_1(x,z) = 15(x^Tz)^2$ and $K_2 = \exp(-||x-z||^2)$. We already know from the previous results that the product of two kernels is a kernel. Hence, if we can separately prove that $K_1$ and $K_2$ are kernels, then that implies K is a kernel as well. \newline
+    \textbf {Proof: $K_1$ is a kernel: } Mercer's condition says, K is a valid kernel for every kernel for every finite set ${x_1, x_2, \dots, x_n}$, for any choice of real valued $c_1, c_2, \dots$, if $\sum_i \sum_j K(x_i,x_j) \geq 0$. Choosing $c_i,c_j$ to be positive real values, then for any pair of examples $x_i.x_j$, for $K_1$, we can write: $\sum_i \sum_j c_i c_j 15(x^Tz)^2$, and since their is a square term involved with positive coefficients, hence its value is greater than equal to 0. Thus , $K_1$ is a valid kernel. \newline
+    \textbf {Proof: $K_2$ is a kernel: }. We can break down $K_2$ as follows:
+    \[K_2(x,z) = \exp(-||x-z||^2) = \exp(-(x-z)^T(x-z)) = \exp(-<x-z, x-z>) = \exp(-(<x,x-z> - <z,x-z>)) \]
+    \[K_2(x,z) = \exp(-(<x,x> - <x,z> - <z,x> + <z,z>)) = \exp(-(||x||^2 + ||z||^2 - 2<x,z>))\]
+    \[K_2(x,z) = \exp(-(||x||^2 + ||z||^2)) \exp(2<x,z>) = C\exp(2<x,z>)\]
+    where C = $\exp(||x||^2 + ||z||^2)$ is a constant. Then expanding the exponential we get:
+    \begin{equation}
+    K_2(x,z) = C \sum_{n=0}^\infty \dfrac{<x,z>^n}{n!}
+    \end{equation}
+
+    Thus, we see that $K_2$ is formed by an infinite summ over polynomial kernels, which are further derived from the product of linear kernels$x^Tz$. Since sum and product of kernels results in a kernel as proved earlier, hence $K_2$ is a kernel. \newline
+    Since, $K$ is formed as the product of $K_1$ and $K_2$, hence $K_1$ is a valid kernel.(Proved). \newline
+
+    \part{3} Prove that the Gaussian kernel can be written down as the inner product of an feature space with infinite dimension. 
+    \[K(x,z) = \exp(\dfrac{-||x-z||^2}{2{\sigma}^2})\]
+
+    Continuing from Equation(2) of the above proof and using the earlier proofs as well: \newline
+    Since, we can write the sum of two kernels as a new kernel, such that
+    \[K(x,z) = K_1(x,z) + K_2(x,z)\]
+    and their corresponding transformations be $\phi$ , $\phi_1$ and $\phi_2$ respectively. This implies that $\phi$ is defined such that it forms vectors of the form:
+    \[ \phi(x) = (\phi_1(x), \phi_2(x))\]
+    such that(similar to the proof for sum over kernels)
+   \[ <\phi(x),\phi(z)> = <\phi_1(x), \phi_1(z)> + <\phi_2(x), \phi_2(z)>\]
+   In the euclidean space, thus $\phi(x)$ is the vector formed by appending the components of $\phi_2(x)$ to $\phi_1(x)$, and then:
+   \[<\phi(x), \phi(z)> = \sum_{i=1}^{dim(K_1)} \phi_{1,i}(x)\phi_{1,i}(z) + \sum_{j=1}^{dim(K_2)} \phi_{1,j}(x)\phi_{1,j}(z)\]
+   \[ = \sum_{i=1}^{dim(K_2)+dim(K_2)} \phi_{i}(x)\phi_{j}(z)\]
+
+   Since $K_1$ and $K_2$ are infinite sum over kernel polynomials from equation(2), hence $K$ can be written down as the inner product of a feature space with infinite dimension as shown above. Here, $K$ represents the RBF, while $K_1$ and $K_2$ represents the infinite sums RBF is composed off as in equation(2). \newline
+
+
+
 \end{document}
