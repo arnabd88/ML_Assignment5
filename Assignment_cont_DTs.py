@@ -2,9 +2,9 @@
 import sys
 import re
 import copy
-import dt_func
+import cont_dt_func
 import svm_func
-import graph
+import graph_cont
 import math
 import numpy
 
@@ -41,26 +41,27 @@ if(test_index != -1):
 
 #[GlobalAttrDict, ExampleStruct, TestStruct] = dt_func.CreateGlobalDict(XData, YData, XTest, YTest)
 XT =[ XData[i][1:] for i in range(0,len(XData))]
-[ GlobalAttrDict, ExampleDict, TestDict] = dt_func.CreateGlobalDict(XT, YData, XTest, YTest, 1)
+[ GlobalAttrDict, ExampleDict, TestDict] = cont_dt_func.CreateGlobalDict(XT, YData, XTest, YTest, 1)
 
 sz = len(XT[0])
 ##BreakDown to N decision trees of k features
 #NList = [5,10,30,100]
-NList=[5,10]
+NList=[5,10,30,100]
 
 TreeForest = []
-for n in NList: ## Trying different tree sizes
+for n in NList:
 	k = math.ceil(math.log(sz,2))
 	M = math.ceil(float(len(XT)/n))
 	for ntree in range(0,n):
 		selMExamples = numpy.random.permutation(len(XT))[0:M]
-		ExampleList = dt_func.sampleExampleList(ExampleDict, selMExamples)
-		Root = dt_func.decideRoot(ExampleList, GlobalAttrDict,k)
-		gRoot = graph.graph(Root, 'ROOT', ExampleList, GlobalAttrDict, 0, -1, k)
+		ExampleList = cont_dt_func.sampleExampleList(ExampleDict, selMExamples)
+		[Root,th] = cont_dt_func.decideRoot(ExampleList, GlobalAttrDict,k)
+		GlobalAttrDict[Root] = th
+		gRoot = graph_cont.graph_cont(Root, 'ROOT', ExampleList, GlobalAttrDict, 0, -1, k)
 		sflag = gRoot.ID3()
 		TreeForest.append(gRoot)
-		y = dt_func.Validate( TreeForest[ntree], TestDict, TestDict['Result'])
-		#print len(y)
+		y = cont_dt_func.Validate( TreeForest[ntree], TestDict, TestDict['Result'])
+		
 
 	##--- Create the input dataSet for SVM ---
 	SVM_XDATA = []
@@ -79,7 +80,7 @@ for n in NList: ## Trying different tree sizes
 			testV[GlobalAttrDict['_AttrOrder_'][f]] = TestDict[GlobalAttrDict['_AttrOrder_'][f]][i]
 		TEST_XDATA.append([1] + [TreeForest[ni].predictResult(testV) for ni in range(0,len(TreeForest))])
 	
-	wvecLearn = svm_func.SVM(SVM_XDATA, YData, 1, 0.001, 50, len(SVM_XDATA[0]))
+	wvecLearn = svm_func.SVM(SVM_XDATA, YData, 0.1, 0.001, 50, len(SVM_XDATA[0]))
 	#print wvecLearn
 	TestStruct = svm_func.SVM_TEST(TEST_XDATA, YTest, wvecLearn)
 	TrainingStruct = svm_func.SVM_TEST(SVM_XDATA, YData, wvecLearn)
@@ -131,5 +132,38 @@ for n in NList: ## Trying different tree sizes
 
  ##--- Just work on the decision tree ----
  #Root = func.decideRoot(ExampleDict, GlobalAttrDict)
+
+	#if(cont==1) : ## if data is continuous , performs the splits
+	#	#for i in range(0,len(AttrDict['_AttrOrder_'])):
+	#	for i in range(0,1):
+	#		tup2 = []
+	#		for j in range(0,len(exdata)):
+	#			tup2.append([exdata[j][i], exlabel[j]])
+	#		tup2.sort(key=lambda tup: tup[0]) ## generates sorted data for a feature. Now mark the partitions
+	#		print tup2
+	#		splitList = [] ## tracks the split points
+	#		prevLabel = tup2[0][1] ## take this as the default label
+	#		for k in range(0,len(tup2)):
+	#			currLabel = tup2[k][1]
+	#			if(currLabel != prevLabel):
+	#				splitList.append(k)
+	#			prevLabel = currLabel
+	#		print splitList
+
+	#		ldict = dict([])
+	#		for k in range(0,len(splitList)):
+	#			boundDict = dict([])
+	#			if(k==0):
+	#				boundDict['L'] = '-'
+	#				boundDict['U'] = tup2[splitList[k]][0]
+	#			elif(k==len(splitList)-1):
+	#				boundDict['L'] = tup2[splitList[k]][0]
+	#				boundDict['U'] = '-'
+	#			else:
+	#				boundDict['L'] = tup2[splitList[k-1]][0]
+	#				boundDict['U'] = tup2[splitList[k]][0]
+	#			ldict['L'+str(k)] = boundDict
+	#		AttrFeature[AttrDict['_AttrOrder_'][i]] = ldict
+	#	print AttrFeature
 
 

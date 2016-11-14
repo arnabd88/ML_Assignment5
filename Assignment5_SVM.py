@@ -13,7 +13,7 @@ test_index = -1 ## when testing required pass this switch
 foldValue = 0 ## required with fold index
 initRandom = 0 ## enable random bit. Default zero
 
-CList = [0.01, pow(2,1), pow(2,-1), pow(2,-2), pow(2,-4), pow(2,2)]
+CList = [1,  pow(2,1), pow(2,-1), pow(2,-2), pow(2,-4), pow(2,2)]
 GList = [1, 0.1, 0.01, 0.001, 0.0001, 10, 100]
 
 trainFileData=[]
@@ -134,7 +134,7 @@ def Run_Q3_2():
 	print "Test-Mistake Count: ", TestStruct[3]
 	print "Test-Accuracy= ",  ((len(XTest) - TestStruct[3])/(float((len(XTest)))))*100, "%"
 	print "Test - Precision Score = ", PrecisionScoreTest 
-	print "Test - Recall Score = ", RecallTest
+	print "Test - Recall Score = ", Recalltest
 	print "Test - F1-Score = ", F1test
 	print "========= End Report =============================="
 
