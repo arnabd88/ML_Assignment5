@@ -241,7 +241,7 @@
   \caption{5-fold experiment on Madelon data set} \\
   %\centering
   \hline\hline
-	  N & Train-Acc & Train-Prec & Train-Recall & Train-F1 & Test-Acc & Test-Prec & Test-Recall & Test-F1 \\[0.5ex]
+	  N & Train-Acc$\%$ & Train-Prec & Train-Recall & Train-F1 & Test-Acc$\%$ & Test-Prec & Test-Recall & Test-F1 \\[0.5ex]
 
   \hline
 	 5 & 99.4 & 0.99 & 0.99 & 0.99 & 86 & 0.91 & 0.80 & 0.85 \\
@@ -254,11 +254,12 @@
   \part{2} For implementing the ensemble method on the madelon dataset, we need to discretize the data from the continuous domain. For this we choose the following split method. At every node, we select k random features. For each feature f, we collect its values across the examples and its labels. Then this map list is sorted, and split points are identified wherever the label changes sign. These split points are identified as a threshold value. Based on this identified split points, we calculate the information gain(based on entrophy) and choose the split for that feature that provided the best information gain, and that infromation gain is the representative of that feature in the decision function that needs to make a decision across the randomly selected k features.  So, once the split splot for each feature has been identified, the feature with the best split/cut (highest information gain), is chosen as the feature to split upon. Once, this decision  has been made,the branching from that node has two branches, one for samples with the corresponding value greater than or equal to threshold and the other for less than threshold. Then at the node in the next level, we have atleast one less feature to split from. We again select random k features, for the duration the available features to split on is greater than or equal to k. Once the available features to split on becomes equal to k, we random selection goes off and we select all the features. \newline
   The choice of the number of examples(m) we take to train each decision tree plays a crucial role here. Our experiments show that with higher values of m, the trees overfit the data and training accuracy shoots up, while the test accuracy goes down. This is precisely because we developed \textbf {unpruned} trees, which will fit the entire training set. To reduce overfitting, we decided to limit the value of 'm' samples that goes to each decision tree. For $n$ being the number of decision trees, and $D$ being the length of the input data set, we chose $m = \dfrac{D}{p*n}$. The m samples are chosen randomly for each decision tree and with replacement. Our trials with $p=1,2,5$, shows that around $p=1,2$ results are fairly optimal. With $p=5$, the results starts to drift away indicating underfitting since we are not supplying enough examples to train upon. Besides, we have tried with setting $m={25\%, 50\%, 70\%}$ of the data set. While $25\%$ gave a similar accuracy as $p=1$ for n=5, that is expected since they both points towards similar sample size. Increasing the percentage of the data-set in the sample improved training-accuracy to around $80\%$ while test-accuracy drops off to lower 40's, indicating too much overfitting. \newline
 
+  Values used for $(C,\gamma_0) = (1,0.01)$. This is the best we got after many trial runs for accuracy. \newline
  \begin{longtable}{c|c|c|c|c|c|c|c|c|c}
   \caption{Ensemble experiment on handwriting data set} \\
   %\centering
   \hline\hline
-	  N & p & Train-Acc & Train-Prec & Train-Recall & Train-F1 & Test-Acc & Test-Prec & Test-Recall & Test-F1 \\[0.5ex]
+	  N & p & Train-Acc$\%$ & Train-Prec & Train-Recall & Train-F1 & Test-Acc$\%$ & Test-Prec & Test-Recall & Test-F1 \\[0.5ex]
 
   \hline
 	 5 & 1 & 68.85 & 0.68 & 0.68 & 0.68 & 52 & 0.60 & 0.112 & 0.19 \\
@@ -277,5 +278,17 @@
   %\label{table:nonlin}
   \end{longtable}
   
+   
+   The best choice of N(number of decision trees) comes to be 10 with p=1. Below is the reported accyracy and precision,recall scores. \newline
+     \textbf {N=10, p=1, C=1, $\gamma_0$=0.01} \newline
+     \textbf {Training: } Accuracy = 70.8\% \newline
+     \textbf {Training: } Precision = 0.70 \newline
+     \textbf {Training: } Recall = 0.71 \newline
+     \textbf {Training: } F1-Score = 0.70 \newline
+
+     \textbf {Test: } Accuracy = 52.66\% \newline
+     \textbf {Test: } Precision = 0.58 \newline
+     \textbf {Test: } Recall = 0.18 \newline
+     \textbf {Test: } F1-Score = 0.27 \newline
 
 \end{document}
