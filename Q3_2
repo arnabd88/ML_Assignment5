@@ -1,0 +1,578 @@
+C = G =  1 1
+C = G =  1 1
+C = G =  1 1
+C = G =  1 1
+C = G =  1 1
+C = G =  1 0.1
+C = G =  1 0.1
+C = G =  1 0.1
+C = G =  1 0.1
+C = G =  1 0.1
+C = G =  1 0.01
+C = G =  1 0.01
+C = G =  1 0.01
+C = G =  1 0.01
+C = G =  1 0.01
+C = G =  1 0.001
+C = G =  1 0.001
+C = G =  1 0.001
+C = G =  1 0.001
+C = G =  1 0.001
+C = G =  1 0.0001
+C = G =  1 0.0001
+C = G =  1 0.0001
+C = G =  1 0.0001
+C = G =  1 0.0001
+C = G =  1 10
+C = G =  1 10
+C = G =  1 10
+C = G =  1 10
+C = G =  1 10
+C = G =  1 100
+C = G =  1 100
+C = G =  1 100
+C = G =  1 100
+C = G =  1 100
+C = G =  2 1
+C = G =  2 1
+C = G =  2 1
+C = G =  2 1
+C = G =  2 1
+C = G =  2 0.1
+C = G =  2 0.1
+C = G =  2 0.1
+C = G =  2 0.1
+C = G =  2 0.1
+C = G =  2 0.01
+C = G =  2 0.01
+C = G =  2 0.01
+C = G =  2 0.01
+C = G =  2 0.01
+C = G =  2 0.001
+C = G =  2 0.001
+C = G =  2 0.001
+C = G =  2 0.001
+C = G =  2 0.001
+C = G =  2 0.0001
+C = G =  2 0.0001
+C = G =  2 0.0001
+C = G =  2 0.0001
+C = G =  2 0.0001
+C = G =  2 10
+C = G =  2 10
+C = G =  2 10
+C = G =  2 10
+C = G =  2 10
+C = G =  2 100
+C = G =  2 100
+C = G =  2 100
+C = G =  2 100
+C = G =  2 100
+C = G =  0.5 1
+C = G =  0.5 1
+C = G =  0.5 1
+C = G =  0.5 1
+C = G =  0.5 1
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+C = G =  0.5 0.1
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+C = G =  0.5 0.01
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+C = G =  0.5 0.001
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+C = G =  0.5 0.0001
+C = G =  0.5 10
+C = G =  0.5 10
+C = G =  0.5 10
+C = G =  0.5 10
+C = G =  0.5 10
+C = G =  0.5 100
+C = G =  0.5 100
+C = G =  0.5 100
+C = G =  0.5 100
+C = G =  0.5 100
+C = G =  0.25 1
+C = G =  0.25 1
+C = G =  0.25 1
+C = G =  0.25 1
+C = G =  0.25 1
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+C = G =  0.25 0.1
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+C = G =  0.25 0.01
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+C = G =  0.25 0.001
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+C = G =  0.25 0.0001
+C = G =  0.25 10
+C = G =  0.25 10
+C = G =  0.25 10
+C = G =  0.25 10
+C = G =  0.25 10
+C = G =  0.25 100
+C = G =  0.25 100
+C = G =  0.25 100
+C = G =  0.25 100
+C = G =  0.25 100
+C = G =  0.0625 1
+C = G =  0.0625 1
+C = G =  0.0625 1
+C = G =  0.0625 1
+C = G =  0.0625 1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.1
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+C = G =  0.0625 0.01
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+C = G =  0.0625 0.001
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+C = G =  0.0625 0.0001
+C = G =  0.0625 10
+C = G =  0.0625 10
+C = G =  0.0625 10
+C = G =  0.0625 10
+C = G =  0.0625 10
+C = G =  0.0625 100
+C = G =  0.0625 100
+C = G =  0.0625 100
+C = G =  0.0625 100
+C = G =  0.0625 100
+C = G =  4 1
+C = G =  4 1
+C = G =  4 1
+C = G =  4 1
+C = G =  4 1
+C = G =  4 0.1
+C = G =  4 0.1
+C = G =  4 0.1
+C = G =  4 0.1
+C = G =  4 0.1
+C = G =  4 0.01
+C = G =  4 0.01
+C = G =  4 0.01
+C = G =  4 0.01
+C = G =  4 0.01
+C = G =  4 0.001
+C = G =  4 0.001
+C = G =  4 0.001
+C = G =  4 0.001
+C = G =  4 0.001
+C = G =  4 0.0001
+C = G =  4 0.0001
+C = G =  4 0.0001
+C = G =  4 0.0001
+C = G =  4 0.0001
+C = G =  4 10
+C = G =  4 10
+C = G =  4 10
+C = G =  4 10
+C = G =  4 10
+C = G =  4 100
+C = G =  4 100
+C = G =  4 100
+C = G =  4 100
+C = G =  4 100
+C = G =  0.01 1
+C = G =  0.01 1
+C = G =  0.01 1
+C = G =  0.01 1
+C = G =  0.01 1
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+C = G =  0.01 0.1
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+C = G =  0.01 0.01
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+C = G =  0.01 0.001
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+C = G =  0.01 0.0001
+C = G =  0.01 10
+C = G =  0.01 10
+C = G =  0.01 10
+C = G =  0.01 10
+C = G =  0.01 10
+C = G =  0.01 100
+C = G =  0.01 100
+C = G =  0.01 100
+C = G =  0.01 100
+C = G =  0.01 100
+C = G =  0.1 1
+C = G =  0.1 1
+C = G =  0.1 1
+C = G =  0.1 1
+C = G =  0.1 1
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+C = G =  0.1 0.1
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+C = G =  0.1 0.01
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+C = G =  0.1 0.001
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+C = G =  0.1 0.0001
+C = G =  0.1 10
+C = G =  0.1 10
+C = G =  0.1 10
+C = G =  0.1 10
+C = G =  0.1 10
+C = G =  0.1 100
+C = G =  0.1 100
+C = G =  0.1 100
+C = G =  0.1 100
+C = G =  0.1 100
+0.01 0.001
+[[53.95, 54.95, 52.9125, 54.8875, 59.1875, 55.9375, 57.4875], [55.1625, 53.7625, 56.9, 53.575, 52.775, 53.975, 54.0125], [59.7375, 52.475, 64.0125, 57.8375, 54.7125, 57.75, 58.6125], [60.575, 59.85, 54.0875, 56.6375, 65.65, 58.6625, 61.525], [55.2375, 57.3875, 59.7125, 62.3125, 61.7875, 56.85, 55.6375], [51.5, 54.2125, 50.8125, 55.325, 54.9625, 55.325, 54.1625], [57.525, 57.6375, 58.875, 62.1, 61.85, 57.7, 56.875], [56.875, 57.4375, 58.975, 59.4, 62.7125, 57.825, 56.2]]
+778 600
+========== Report for Q3_2 (k=5) fold validation =================
+======== C =  1 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 1 ,g= 1 ) Accuracy =  53.95 %
+Average Test Accuracy for pair(c= 1 ,g= 1 ) Accuracy =  50.0 %
+
+
+======== C =  1 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 1 ,g= 0.1 ) Accuracy =  54.95 %
+Average Test Accuracy for pair(c= 1 ,g= 0.1 ) Accuracy =  51.1 %
+
+
+======== C =  1 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 1 ,g= 0.01 ) Accuracy =  52.9125 %
+Average Test Accuracy for pair(c= 1 ,g= 0.01 ) Accuracy =  49.2 %
+
+
+======== C =  1 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 1 ,g= 0.001 ) Accuracy =  54.8875 %
+Average Test Accuracy for pair(c= 1 ,g= 0.001 ) Accuracy =  52.45 %
+
+
+======== C =  1 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 1 ,g= 0.0001 ) Accuracy =  59.1875 %
+Average Test Accuracy for pair(c= 1 ,g= 0.0001 ) Accuracy =  53.95 %
+
+
+======== C =  1 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 1 ,g= 10 ) Accuracy =  55.9375 %
+Average Test Accuracy for pair(c= 1 ,g= 10 ) Accuracy =  51.8 %
+
+
+======== C =  1 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 1 ,g= 100 ) Accuracy =  57.4875 %
+Average Test Accuracy for pair(c= 1 ,g= 100 ) Accuracy =  55.15 %
+
+
+======== C =  2 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 2 ,g= 1 ) Accuracy =  55.1625 %
+Average Test Accuracy for pair(c= 2 ,g= 1 ) Accuracy =  52.3 %
+
+
+======== C =  2 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 2 ,g= 0.1 ) Accuracy =  53.7625 %
+Average Test Accuracy for pair(c= 2 ,g= 0.1 ) Accuracy =  52.95 %
+
+
+======== C =  2 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 2 ,g= 0.01 ) Accuracy =  56.9 %
+Average Test Accuracy for pair(c= 2 ,g= 0.01 ) Accuracy =  52.75 %
+
+
+======== C =  2 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 2 ,g= 0.001 ) Accuracy =  53.575 %
+Average Test Accuracy for pair(c= 2 ,g= 0.001 ) Accuracy =  51.15 %
+
+
+======== C =  2 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 2 ,g= 0.0001 ) Accuracy =  52.775 %
+Average Test Accuracy for pair(c= 2 ,g= 0.0001 ) Accuracy =  52.7 %
+
+
+======== C =  2 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 2 ,g= 10 ) Accuracy =  53.975 %
+Average Test Accuracy for pair(c= 2 ,g= 10 ) Accuracy =  50.75 %
+
+
+======== C =  2 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 2 ,g= 100 ) Accuracy =  54.0125 %
+Average Test Accuracy for pair(c= 2 ,g= 100 ) Accuracy =  51.3 %
+
+
+======== C =  0.5 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 0.5 ,g= 1 ) Accuracy =  59.7375 %
+Average Test Accuracy for pair(c= 0.5 ,g= 1 ) Accuracy =  52.95 %
+
+
+======== C =  0.5 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 0.5 ,g= 0.1 ) Accuracy =  52.475 %
+Average Test Accuracy for pair(c= 0.5 ,g= 0.1 ) Accuracy =  49.9 %
+
+
+======== C =  0.5 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 0.5 ,g= 0.01 ) Accuracy =  64.0125 %
+Average Test Accuracy for pair(c= 0.5 ,g= 0.01 ) Accuracy =  55.95 %
+
+
+======== C =  0.5 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 0.5 ,g= 0.001 ) Accuracy =  57.8375 %
+Average Test Accuracy for pair(c= 0.5 ,g= 0.001 ) Accuracy =  52.7 %
+
+
+======== C =  0.5 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 0.5 ,g= 0.0001 ) Accuracy =  54.7125 %
+Average Test Accuracy for pair(c= 0.5 ,g= 0.0001 ) Accuracy =  51.45 %
+
+
+======== C =  0.5 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 0.5 ,g= 10 ) Accuracy =  57.75 %
+Average Test Accuracy for pair(c= 0.5 ,g= 10 ) Accuracy =  53.0 %
+
+
+======== C =  0.5 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 0.5 ,g= 100 ) Accuracy =  58.6125 %
+Average Test Accuracy for pair(c= 0.5 ,g= 100 ) Accuracy =  51.7 %
+
+
+======== C =  0.25 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 0.25 ,g= 1 ) Accuracy =  60.575 %
+Average Test Accuracy for pair(c= 0.25 ,g= 1 ) Accuracy =  54.55 %
+
+
+======== C =  0.25 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 0.25 ,g= 0.1 ) Accuracy =  59.85 %
+Average Test Accuracy for pair(c= 0.25 ,g= 0.1 ) Accuracy =  54.4 %
+
+
+======== C =  0.25 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 0.25 ,g= 0.01 ) Accuracy =  54.0875 %
+Average Test Accuracy for pair(c= 0.25 ,g= 0.01 ) Accuracy =  50.35 %
+
+
+======== C =  0.25 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 0.25 ,g= 0.001 ) Accuracy =  56.6375 %
+Average Test Accuracy for pair(c= 0.25 ,g= 0.001 ) Accuracy =  53.45 %
+
+
+======== C =  0.25 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 0.25 ,g= 0.0001 ) Accuracy =  65.65 %
+Average Test Accuracy for pair(c= 0.25 ,g= 0.0001 ) Accuracy =  56.85 %
+
+
+======== C =  0.25 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 0.25 ,g= 10 ) Accuracy =  58.6625 %
+Average Test Accuracy for pair(c= 0.25 ,g= 10 ) Accuracy =  52.55 %
+
+
+======== C =  0.25 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 0.25 ,g= 100 ) Accuracy =  61.525 %
+Average Test Accuracy for pair(c= 0.25 ,g= 100 ) Accuracy =  52.0 %
+
+
+======== C =  0.0625 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 0.0625 ,g= 1 ) Accuracy =  55.2375 %
+Average Test Accuracy for pair(c= 0.0625 ,g= 1 ) Accuracy =  55.1 %
+
+
+======== C =  0.0625 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 0.0625 ,g= 0.1 ) Accuracy =  57.3875 %
+Average Test Accuracy for pair(c= 0.0625 ,g= 0.1 ) Accuracy =  53.8 %
+
+
+======== C =  0.0625 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 0.0625 ,g= 0.01 ) Accuracy =  59.7125 %
+Average Test Accuracy for pair(c= 0.0625 ,g= 0.01 ) Accuracy =  54.0 %
+
+
+======== C =  0.0625 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 0.0625 ,g= 0.001 ) Accuracy =  62.3125 %
+Average Test Accuracy for pair(c= 0.0625 ,g= 0.001 ) Accuracy =  56.35 %
+
+
+======== C =  0.0625 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 0.0625 ,g= 0.0001 ) Accuracy =  61.7875 %
+Average Test Accuracy for pair(c= 0.0625 ,g= 0.0001 ) Accuracy =  53.25 %
+
+
+======== C =  0.0625 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 0.0625 ,g= 10 ) Accuracy =  56.85 %
+Average Test Accuracy for pair(c= 0.0625 ,g= 10 ) Accuracy =  55.0 %
+
+
+======== C =  0.0625 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 0.0625 ,g= 100 ) Accuracy =  55.6375 %
+Average Test Accuracy for pair(c= 0.0625 ,g= 100 ) Accuracy =  51.6 %
+
+
+======== C =  4 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 4 ,g= 1 ) Accuracy =  51.5 %
+Average Test Accuracy for pair(c= 4 ,g= 1 ) Accuracy =  50.15 %
+
+
+======== C =  4 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 4 ,g= 0.1 ) Accuracy =  54.2125 %
+Average Test Accuracy for pair(c= 4 ,g= 0.1 ) Accuracy =  50.1 %
+
+
+======== C =  4 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 4 ,g= 0.01 ) Accuracy =  50.8125 %
+Average Test Accuracy for pair(c= 4 ,g= 0.01 ) Accuracy =  49.05 %
+
+
+======== C =  4 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 4 ,g= 0.001 ) Accuracy =  55.325 %
+Average Test Accuracy for pair(c= 4 ,g= 0.001 ) Accuracy =  54.7 %
+
+
+======== C =  4 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 4 ,g= 0.0001 ) Accuracy =  54.9625 %
+Average Test Accuracy for pair(c= 4 ,g= 0.0001 ) Accuracy =  52.8 %
+
+
+======== C =  4 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 4 ,g= 10 ) Accuracy =  55.325 %
+Average Test Accuracy for pair(c= 4 ,g= 10 ) Accuracy =  52.2 %
+
+
+======== C =  4 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 4 ,g= 100 ) Accuracy =  54.1625 %
+Average Test Accuracy for pair(c= 4 ,g= 100 ) Accuracy =  53.65 %
+
+
+======== C =  0.01 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 0.01 ,g= 1 ) Accuracy =  57.525 %
+Average Test Accuracy for pair(c= 0.01 ,g= 1 ) Accuracy =  53.95 %
+
+
+======== C =  0.01 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 0.01 ,g= 0.1 ) Accuracy =  57.6375 %
+Average Test Accuracy for pair(c= 0.01 ,g= 0.1 ) Accuracy =  55.75 %
+
+
+======== C =  0.01 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 0.01 ,g= 0.01 ) Accuracy =  58.875 %
+Average Test Accuracy for pair(c= 0.01 ,g= 0.01 ) Accuracy =  56.8 %
+
+
+======== C =  0.01 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 0.01 ,g= 0.001 ) Accuracy =  62.1 %
+Average Test Accuracy for pair(c= 0.01 ,g= 0.001 ) Accuracy =  57.6 %
+
+
+======== C =  0.01 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 0.01 ,g= 0.0001 ) Accuracy =  61.85 %
+Average Test Accuracy for pair(c= 0.01 ,g= 0.0001 ) Accuracy =  56.55 %
+
+
+======== C =  0.01 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 0.01 ,g= 10 ) Accuracy =  57.7 %
+Average Test Accuracy for pair(c= 0.01 ,g= 10 ) Accuracy =  56.05 %
+
+
+======== C =  0.01 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 0.01 ,g= 100 ) Accuracy =  56.875 %
+Average Test Accuracy for pair(c= 0.01 ,g= 100 ) Accuracy =  54.9 %
+
+
+======== C =  0.1 , Gamma =  1 ,==================
+Average Training Accuracy for pair(c= 0.1 ,g= 1 ) Accuracy =  56.875 %
+Average Test Accuracy for pair(c= 0.1 ,g= 1 ) Accuracy =  53.3 %
+
+
+======== C =  0.1 , Gamma =  0.1 ,==================
+Average Training Accuracy for pair(c= 0.1 ,g= 0.1 ) Accuracy =  57.4375 %
+Average Test Accuracy for pair(c= 0.1 ,g= 0.1 ) Accuracy =  53.15 %
+
+
+======== C =  0.1 , Gamma =  0.01 ,==================
+Average Training Accuracy for pair(c= 0.1 ,g= 0.01 ) Accuracy =  58.975 %
+Average Test Accuracy for pair(c= 0.1 ,g= 0.01 ) Accuracy =  52.0 %
+
+
+======== C =  0.1 , Gamma =  0.001 ,==================
+Average Training Accuracy for pair(c= 0.1 ,g= 0.001 ) Accuracy =  59.4 %
+Average Test Accuracy for pair(c= 0.1 ,g= 0.001 ) Accuracy =  53.35 %
+
+
+======== C =  0.1 , Gamma =  0.0001 ,==================
+Average Training Accuracy for pair(c= 0.1 ,g= 0.0001 ) Accuracy =  62.7125 %
+Average Test Accuracy for pair(c= 0.1 ,g= 0.0001 ) Accuracy =  53.2 %
+
+
+======== C =  0.1 , Gamma =  10 ,==================
+Average Training Accuracy for pair(c= 0.1 ,g= 10 ) Accuracy =  57.825 %
+Average Test Accuracy for pair(c= 0.1 ,g= 10 ) Accuracy =  56.2 %
+
+
+======== C =  0.1 , Gamma =  100 ,==================
+Average Training Accuracy for pair(c= 0.1 ,g= 100 ) Accuracy =  56.2 %
+Average Test Accuracy for pair(c= 0.1 ,g= 100 ) Accuracy =  51.7 %
+
+
+Best-C =  0.01
+Best-Gamma =  0.001
+len-XTest 600
+Training-Mistake Count:  778
+Training-Accuracy =  61.1 %
+Training - Precision Score =  0.730290456432
+Training - Recall Score =  0.352
+Training - F1-Score =  0.475033738192
+Test-Mistake Count:  248
+Test-Accuracy=  58.6666666667 %
+Test - Precision Score =  0.691176470588
+Test - Recall Score =  0.313333333333
+Test - F1-Score =  0.43119266055
+========= End Report ==============================
