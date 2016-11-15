@@ -63,14 +63,14 @@
 
     \question{2}{Kernels}
     \part{1a} Given valid kernels , $K_1(x,z)$ and $K_2(x,z)$, we need to show the product of these two kernels is also a kernel. For the defined space $x_1, x_2, \dots, x_n \in S$, we define the respective Gram matrices as: \newline
-    \[ C = \{c_{ij}\} = K_1(x_i, x_j) \]
-    \[ D = \{d_{ij}\} = K_2(x_i, x_j) \]
+    $ C = \{c_{ij}\}$, where $\{c_{ij}\} = K_1(x_i, x_j) $ \newline
+    $ D = \{d_{ij}\}$, where $\{d_{ij}\} = K_2(x_i, x_j) $ \newline
     We define the newKernel $K=K_1 \times K_2$ as the product of these kernels , such that its Gram matrix looks like: \newline
-    \[ E = \{e_{ij}\} = \{c_{ij}\}\{d_{ij}\} = K(x_i, x_j) \]
+    $ E = \{e_{ij}\} = \{c_{ij}\}\{d_{ij}\}$, where $\{e_{ij}\}  = K(x_i, x_j) $ \newline
 
     Now, since the kernels $K_1$ and $K_2$ are spd, hence the elements are symmetric. So , we can write : \newline
-    \[ C = \{c_{ij}\} = K_1(x_i, x_j) = \{c_{ji}\} = K_1(x_j, x_i) \]
-    \[ D = \{d_{ij}\} = K_2(x_i, x_j) = \{d_{ji}\} = K_2(x_j, x_i) \]
+    $ C = \{c_{ij}\} = \{c_{ji}\}$, hence $ K_1(x_i, x_j) = K_1(x_j, x_i) $
+    $ D = \{d_{ij}\} = \{d_{ji}\}$, hence $ K_2(x_i, x_j) = K_22x_j, x_i) $
     Then , the corresponding elements in the matric for the new kernel, will be:
     \[ \{e_{ji}\} = \{c_{ji}\}\{d_{ji}\} = \{c_{ij}\}\{d_{ij}\} = \{e_{ij}\}  \]
     \textbf {Hence, the new kernel is also symmetric. }
@@ -105,6 +105,7 @@
     \part{2} Given two examples $x \in R^2$ and $z \in R^2$, \textbf {Prove} the following is a kernel.
     \[K(x,z) = 15(x^Tz)^2 \exp(-||x-z||^2)\]
     Let $K_1(x,z) = 15(x^Tz)^2$ and $K_2 = \exp(-||x-z||^2)$. We already know from the previous results that the product of two kernels is a kernel. Hence, if we can separately prove that $K_1$ and $K_2$ are kernels, then that implies K is a kernel as well. \newline
+    \textbf {Proof: $K_1$ is a kernel: } A function is a kernel if it corresponds to an inner product in some feature space. Since, $x^Tz$ is an inner product of the vectors $x$ and $z$ , hence $A = x^Tz$ it is a linear kernel. Since , we have already showed that product of two kernels is a kernels, hence $A^2 = (x^Tz)(x^Tz) = (x^Tz)^2$ is also a kernel. Now the result of a kernel multiplied by a non-negative constant, is a kernel. Since $15>0$, and $(x^Tz)^2$ is a kernel, hence $15(x^Tz)^2$ is a kernel. \newline
     \textbf {Proof: $K_1$ is a kernel: } Mercer's condition says, K is a valid if for every finite set ${x_1, x_2, \dots, x_n}$, for any choice of real valued $c_1, c_2, \dots$, if $\sum_i \sum_j K(x_i,x_j) \geq 0$. Choosing $c_i,c_j$ to be positive real values, then for any pair of examples $x_i.x_j$, for $K_1$, we can write: $\sum_i \sum_j c_i c_j 15(x^Tz)^2$, and since their is a square term involved with positive coefficients, hence its value is greater than equal to 0. Thus , $K_1$ is a valid kernel. \newline
     \textbf {Proof: $K_2$ is a kernel: }. We can break down $K_2$ as follows:
     \[K_2(x,z) = \exp(-||x-z||^2) = \exp(-(x-z)^T(x-z)) = \exp(-<x-z, x-z>) = \exp(-(<x,x-z> - <z,x-z>)) \]
