@@ -53,9 +53,10 @@
     \[ D_{3_{marginMax}} = \dfrac{1}{2\times \sqrt[2]{5}}\]
 
     \part{2b}
-    For $D_1$, $R=\dfrac{3}{2}$ and $\gamma = \dfrac{1}{2 \times \sqrt[2]{2}}$, perceptron mistake bound for $D_1$ = 18. \newline
-    For $D_2$, $R=1$ and $\gamma=\dfrac{\sqrt[2]{3}}{4}$, perceptron mistake bound for $D_2$ = $\dfrac{16}{3}$. \newline
-    For $D_3$, $R=\dfrac{3}{2}$ and $\gamma = \dfrac{1}{2\times \sqrt[2]{5}}$, perceptron mistake bound for $D_3$ = 45. \newline
+    For finding the perceptron mistake bound, the mistake bound is given as $\leq \bigg ( \dfrac{R}{\gamma} \bigg )^2$, where is the farthest point from the origin. \newline
+    For $D_1$, farthest point is $x_7$, so $R=\dfrac{3}{2}$ and $\gamma = \dfrac{1}{2 \times \sqrt[2]{2}}$, perceptron mistake bound for $D_1$ = 18. \newline
+    For $D_2$, farthest point is $x_8$, so $R=\dfrac{\sqrt[2]{5}}{2}$ and $\gamma=\dfrac{\sqrt[2]{3}}{4}$, perceptron mistake bound for $D_2$ = 6 $\leq \dfrac{20}{3}$. \newline
+    For $D_3$, farthest point is $x_7$, so $R=\dfrac{3}{2}$ and $\gamma = \dfrac{1}{2\times \sqrt[2]{5}}$, perceptron mistake bound for $D_3$ = 45. \newline
     $D_3$ has the greatest mistake bound. \newline
 
     \part{2c} A higher mistake bound indicates how well the classifier can fit the training data by making only this bounded number of mistakes. Hence, a low mistake bound will means the classifier fits the training data quickly. However, that provides no guarantees on the test data. Since the perceptron learns by making mistakes, hence a lower number of mistakes indicate that the learning performed by the perceptron has been less, and hence its predictive power intuitively reduces on the test data. To put it simply, a classifier learns less if it makes less number of mistakes because that is its only entry point towards learning and updates. Hence, the classifier with a higher mistakes bound is easier to learn and the one with a small mistake bound is difficult to learn. Thus the ranking in order of ease of ranking will be $D_3$, $D_1$, $D_2$ . \newline
@@ -104,7 +105,7 @@
     \part{2} Given two examples $x \in R^2$ and $z \in R^2$, \textbf {Prove} the following is a kernel.
     \[K(x,z) = 15(x^Tz)^2 \exp(-||x-z||^2)\]
     Let $K_1(x,z) = 15(x^Tz)^2$ and $K_2 = \exp(-||x-z||^2)$. We already know from the previous results that the product of two kernels is a kernel. Hence, if we can separately prove that $K_1$ and $K_2$ are kernels, then that implies K is a kernel as well. \newline
-    \textbf {Proof: $K_1$ is a kernel: } Mercer's condition says, K is a valid kernel for every kernel for every finite set ${x_1, x_2, \dots, x_n}$, for any choice of real valued $c_1, c_2, \dots$, if $\sum_i \sum_j K(x_i,x_j) \geq 0$. Choosing $c_i,c_j$ to be positive real values, then for any pair of examples $x_i.x_j$, for $K_1$, we can write: $\sum_i \sum_j c_i c_j 15(x^Tz)^2$, and since their is a square term involved with positive coefficients, hence its value is greater than equal to 0. Thus , $K_1$ is a valid kernel. \newline
+    \textbf {Proof: $K_1$ is a kernel: } Mercer's condition says, K is a valid if for every finite set ${x_1, x_2, \dots, x_n}$, for any choice of real valued $c_1, c_2, \dots$, if $\sum_i \sum_j K(x_i,x_j) \geq 0$. Choosing $c_i,c_j$ to be positive real values, then for any pair of examples $x_i.x_j$, for $K_1$, we can write: $\sum_i \sum_j c_i c_j 15(x^Tz)^2$, and since their is a square term involved with positive coefficients, hence its value is greater than equal to 0. Thus , $K_1$ is a valid kernel. \newline
     \textbf {Proof: $K_2$ is a kernel: }. We can break down $K_2$ as follows:
     \[K_2(x,z) = \exp(-||x-z||^2) = \exp(-(x-z)^T(x-z)) = \exp(-<x-z, x-z>) = \exp(-(<x,x-z> - <z,x-z>)) \]
     \[K_2(x,z) = \exp(-(<x,x> - <x,z> - <z,x> + <z,z>)) = \exp(-(||x||^2 + ||z||^2 - 2<x,z>))\]
@@ -114,7 +115,7 @@
     K_2(x,z) = C \sum_{n=0}^\infty \dfrac{<x,z>^n}{n!}
     \end{equation}
 
-    Thus, we see that $K_2$ is formed by an infinite summ over polynomial kernels, which are further derived from the product of linear kernels$x^Tz$. Since sum and product of kernels results in a kernel as proved earlier, hence $K_2$ is a kernel. \newline
+    Thus, we see that $K_2$ is formed by an infinite sum over polynomial kernels, which are further derived from the product of linear kernels$x^Tz$. Since sum and product of kernels results in a kernel as proved earlier, hence $K_2$ is a kernel. \newline
     Since, $K$ is formed as the product of $K_1$ and $K_2$, hence $K_1$ is a valid kernel.(Proved). \newline
 
     \part{3} Prove that the Gaussian kernel can be written down as the inner product of an feature space with infinite dimension. 
@@ -129,10 +130,152 @@
    \[ <\phi(x),\phi(z)> = <\phi_1(x), \phi_1(z)> + <\phi_2(x), \phi_2(z)>\]
    In the euclidean space, thus $\phi(x)$ is the vector formed by appending the components of $\phi_2(x)$ to $\phi_1(x)$, and then:
    \[<\phi(x), \phi(z)> = \sum_{i=1}^{dim(K_1)} \phi_{1,i}(x)\phi_{1,i}(z) + \sum_{j=1}^{dim(K_2)} \phi_{1,j}(x)\phi_{1,j}(z)\]
-   \[ = \sum_{i=1}^{dim(K_2)+dim(K_2)} \phi_{i}(x)\phi_{j}(z)\]
+   \[ = \sum_{i=1}^{dim(K_1)+dim(K_2)} \phi_{i}(x)\phi_{j}(z)\]
 
    Since $K_1$ and $K_2$ are infinite sum over kernel polynomials from equation(2), hence $K$ can be written down as the inner product of a feature space with infinite dimension as shown above. Here, $K$ represents the RBF, while $K_1$ and $K_2$ represents the infinite sums RBF is composed off as in equation(2). \newline
 
+   \question{3.1}{Support Vector Machines}
+   \part{1} Implementation of SVM with $C=1$ and $\gamma_0 = 0.01$. \newline
+   DataSet = Handwriting \newline
+   Training Accuracy = 94.1\% \newline
+   Test Accuracy = 91.9\% \newline
 
+   \part{2} Below table reports the results of the 5-fold experiments on the madelon dataset across varying values for $C$ and $\gamma_0$
+  
+ \begin{longtable}{c|c|c|c}
+  \caption{5-fold experiment on Madelon data set} \\
+  %\centering
+  %\begin{tabular}{c c  c c }
+  \hline\hline
+	  C & $\gamma_0$ & Avg.Training Accuracy($\%$) & Avg.Test Accuracy($\%$) \\[1ex]
+  \hline
+	  1 & 1 & 53.95 & 50.0 \\
+	  1 & 0.1 & 54.95 & 51.1 \\
+	  1 & 0.01 & 52.91 & 49.2 \\
+	  1 & 0.001 & 54.88 & 52.45 \\
+	  1 & 0.0001 & 59.18 & 53.95 \\
+	  1 & 10 & 55.93 & 51.8 \\
+	  1 & 100 & 57.48 & 55.15 \\
+	  2 & 1 & 55.16 & 52.3 \\
+	  2 & 0.1 & 53.76 & 52.95 \\
+	  2 & 0.01 & 56.9 & 52.75 \\
+	  2 & 0.001 & 53.575 & 51.15 \\
+	  2 & 0.0001 & 52.775 & 52.7 \\
+	  2 & 10 & 53.975 & 50.75 \\
+	  2 & 100 & 54.01 & 51.3 \\
+	  0.5 & 1 & 59.73 & 52.95 \\
+	  0.5 & 0.1 & 52.47 & 49.9 \\
+	  0.5 & 0.01 & 64.01 & 55.95 \\
+	  0.5 & 0.001 & 57.83 & 52.7 \\
+	  0.5 & 0.0001 & 54.71 & 51.45 \\
+	  0.5 & 10 & 57.75 & 53.0 \\
+	  0.5 & 100 & 58.61 & 51.7 \\
+	  0.25 & 1 & 60.57 & 54.55 \\
+	  0.25 & 0.1 & 59.85 & 54.4 \\
+	  0.25 & 0.01 & 54.08 & 50.35 \\
+	  0.25 & 0.001 & 56.63 & 53.45 \\
+	  0.25 & 0.0001 & 65.65 & 56.85 \\
+	  0.25 & 10 & 58.6625 & 52.55 \\
+	  0.25 & 100 & 61.52 & 52.0 \\
+	  0.0625 & 1 & 55.23 & 55.1 \\
+	  0.0625 & 0.1 & 57.38 & 53.8 \\
+	  0.0625 & 0.01 & 59.71 & 54.0 \\
+	  0.0625 & 0.001 & 62.31 & 56.35 \\
+	  0.0625 & 0.0001 & 61.78 & 53.25 \\
+	  0.0625 & 10 & 56.85 & 55.0 \\
+	  0.0625 & 100 & 55.63 & 51.6 \\
+	  4 & 1 & 51.5 & 50.15 \\
+	  4 & 0.1 & 54.21 & 50.1 \\
+	  4 & 0.01 & 50.81 & 49.05 \\
+	  4 & 0.001 & 55.32 & 54.7 \\
+	  4 & 0.0001 & 54.96 & 52.8 \\
+	  4 & 10 & 55.32 & 52.2 \\
+	  4 & 100 & 54.16 & 53.65 \\
+	  0.01 & 1 & 57.52 & 53.95 \\
+	  0.01 & 0.1 & 57.63 & 55.75 \\
+	  0.01 & 0.01 & 58.87 & 56.8 \\
+	  0.01 & 0.001 & 62.1 & 57.6 \\
+	  0.01 & 0.0001 & 61.85 & 56.55 \\
+	  0.01 & 10 & 57.7 & 56.05 \\
+	  0.01 & 100 & 56.87 & 54.9 \\
+	  0.1 & 1 & 56.87 & 53.3 \\
+	  0.1 & 0.1 & 57.43 & 53.15 \\
+	  0.1 & 0.01 & 58.97 & 52.0 \\
+	  0.1 & 0.001 & 59.4 & 53.35 \\
+	  0.1 & 0.0001 & 62.71 & 53.2 \\
+	  0.1 & 10 & 57.82 & 56.2 \\
+	  0.1 & 100 & 56.2 & 51.7 \\ [1ex]
+  %\end{tabular}
+  %\label{table:nonlin}
+  \end{longtable}
+
+  The C list on trial = $[1, 2, 0.5, 0.25, 0.0625, 4, 0.01, 0.1]$ \newline
+  The $\gamma_0$ list on trial = $[1, 0.1, 0.01, 0.001, 0.0001, 10, 100]$ \newline
+  From the experiment , the final extracted best combinations of hyperparameyters and corresponding accuracy are listed below: \newline
+  Best C = 0.01 \newline
+  Best $\gamma_0$ = 0.001 \newline
+  \textbf {Training:} Accuracy = 61.1\% \newline
+  \textbf {Test:} Accuracy = 58.66\% \newline
+
+  \part{3} Precision, Recall and F1 scores.\newline
+  \textbf {Handwriting Data Set}: \newline
+  \textbf {Training:} Precision Score = 0.925 \newline
+  \textbf {Training:} Recall Score = 0.970 \newline
+  \textbf {Training:} F1-Score = 0.947 \newline
+  \textbf {Test:} Precision Score = 0.90 \newline
+  \textbf {Test:} Recall Score = 0.947 \newline
+  \textbf {Test:} F1-Score = 0.923 \newline
+
+  \textbf {Madelon Data Set}: \newline
+  \textbf {Training:} Precision Score = 0.73 \newline
+  \textbf {Training:} Recall Score = 0.352 \newline
+  \textbf {Training:} F1-Score = 0.475 \newline
+  \textbf {Test:} Precision Score = 0.69 \newline
+  \textbf {Test:} Recall Score = 0.313 \newline
+  \textbf {Test:} F1-Score = 0.43 \newline
+
+  \question{3.2}{Ensemble of Decision Trees}
+  \part{1} Creating an N ensemble decision tree whose output forms an N dimensional input vector to a SVM classifier. Here we test on N=(5,10,100), and $C = 0.1$, $\gamma_0 = 0.01$ and epochs = 60. The value of k, the randomly selected features at every split = $\log_2d = \log_2256 = 8$. The results are reported below in Table-2: \newline
+
+ \begin{longtable}{c|c|c|c|c|c|c|c|c}
+  \caption{5-fold experiment on Madelon data set} \\
+  %\centering
+  \hline\hline
+	  N & Train-Acc & Train-Prec & Train-Recall & Train-F1 & Test-Acc & Test-Prec & Test-Recall & Test-F1 \\[0.5ex]
+
+  \hline
+	 5 & 99.4 & 0.99 & 0.99 & 0.99 & 86 & 0.91 & 0.80 & 0.85 \\
+	 10 & 100 & 1 & 1 & 1 & 88.87 & 0.95 & 0.82 & 0.88 \\
+	 100 & 100 & 1 & 1 & 1 & 90.21 & 0.95 & 0.84 & 0.89 \\ [0.5ex]
+  %\end{tabular}
+  %\label{table:nonlin}
+  \end{longtable}
+
+  \part{2} For implementing the ensemble method on the madelon dataset, we need to discretize the data from the continuous domain. For this we choose the following split method. At every node, we select k random features. For each feature f, we collect its values across the examples and its labels. Then this map list is sorted, and split points are identified wherever the label changes sign. These split points are identified as a threshold value. Based on this identified split points, we calculate the information gain(based on entrophy) and choose the split for that feature that provided the best information gain, and that infromation gain is the representative of that feature in the decision function that needs to make a decision across the randomly selected k features.  So, once the split splot for each feature has been identified, the feature with the best split/cut (highest information gain), is chosen as the feature to split upon. Once, this decision  has been made,the branching from that node has two branches, one for samples with the corresponding value greater than or equal to threshold and the other for less than threshold. Then at the node in the next level, we have atleast one less feature to split from. We again select random k features, for the duration the available features to split on is greater than or equal to k. Once the available features to split on becomes equal to k, we random selection goes off and we select all the features. \newline
+  The choice of the number of examples(m) we take to train each decision tree plays a crucial role here. Our experiments show that with higher values of m, the trees overfit the data and training accuracy shoots up, while the test accuracy goes down. This is precisely because we developed \textbf {unpruned} trees, which will fit the entire training set. To reduce overfitting, we decided to limit the value of 'm' samples that goes to each decision tree. For $n$ being the number of decision trees, and $D$ being the length of the input data set, we chose $m = \dfrac{D}{p*n}$. The m samples are chosen randomly for each decision tree and with replacement. Our trials with $p=1,2,5$, shows that around $p=1,2$ results are fairly optimal. With $p=5$, the results starts to drift away indicating underfitting since we are not supplying enough examples to train upon. Besides, we have tried with setting $m={25\%, 50\%, 70\%}$ of the data set. While $25\%$ gave a similar accuracy as $p=1$ for n=5, that is expected since they both points towards similar sample size. Increasing the percentage of the data-set in the sample improved training-accuracy to around $80\%$ while test-accuracy drops off to lower 40's, indicating too much overfitting. \newline
+
+ \begin{longtable}{c|c|c|c|c|c|c|c|c|c}
+  \caption{Ensemble experiment on handwriting data set} \\
+  %\centering
+  \hline\hline
+	  N & p & Train-Acc & Train-Prec & Train-Recall & Train-F1 & Test-Acc & Test-Prec & Test-Recall & Test-F1 \\[0.5ex]
+
+  \hline
+	 5 & 1 & 68.85 & 0.68 & 0.68 & 0.68 & 52 & 0.60 & 0.112 & 0.19 \\
+	 10 & 1 & 70.8 & 0.70 & 0.71 & 0.70 & 52.66 & 0.58 & 0.18 & 0.27 \\
+	 30 & 1 & 72.85 & 0.72 & 0.73 & 0.73 & 52.33 & 0.55 & 0.22 & 0.31 \\
+	 100 & 1 & 73.25 & 0.74 & 0.71 & 0.72 & 49.83 & 0.49 & 0.19 & 0.27 \\
+	 5 & 2 & 60.65 & 0.60 & 0.63 & 0.61 & 52 & 0.51 & 0.76 & 0.61 \\
+	 10 & 2 & 61.35 & 0.60 & 0.66 & 0.63 & 51.5 & 0.51 & 0.76 & 0.61 \\
+	 30 & 2 & 62.6 & 0.61 & 0.65 & 0.63 & 50 & 0.5 & 0.67 & 0.57 \\
+	 100 & 5 & 65.8 & 0.66 & 0.63 & 0.64 & 49.33 & 0.49 & 0.66 & 0.56 \\
+	 5 & 5 & 54.4 & 0.54 & 0.58 & 0.56 & 46.33 & 0.456 & 0.386 & 0.418 \\
+	 10 & 5 & 56 & 0.55 & 0.65 & 0.59 & 46.33 & 0.421 & 0.196 & 0.268 \\
+	 30 & 5 & 59.5 & 0.57 & 0.69 & 0.63 & 47 & 0.47 & 0.48 & 0.47 \\
+	 100 & 5 & 62.8 & 0.61 & 0.70 & 0.65 & 46 & 0.45 & 0.39 & 0.419 \\ [0.5ex]
+  %\end{tabular}
+  %\label{table:nonlin}
+  \end{longtable}
+  
 
 \end{document}
