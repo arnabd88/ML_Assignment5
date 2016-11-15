@@ -46,12 +46,13 @@ XT =[ XData[i][1:] for i in range(0,len(XData))]
 sz = len(XT[0])
 ##BreakDown to N decision trees of k features
 #NList = [5,10,30,100]
-NList=[5,10]
+NList=[5,10,100]
 
 TreeForest = []
 for n in NList: ## Trying different tree sizes
 	k = math.ceil(math.log(sz,2))
-	M = math.ceil(float(len(XT)/n))
+	#M = math.ceil(float(len(XT)/n))
+	M = math.ceil(70*(float(len(XT))/100))
 	for ntree in range(0,n):
 		selMExamples = numpy.random.permutation(len(XT))[0:M]
 		ExampleList = dt_func.sampleExampleList(ExampleDict, selMExamples)
@@ -79,7 +80,7 @@ for n in NList: ## Trying different tree sizes
 			testV[GlobalAttrDict['_AttrOrder_'][f]] = TestDict[GlobalAttrDict['_AttrOrder_'][f]][i]
 		TEST_XDATA.append([1] + [TreeForest[ni].predictResult(testV) for ni in range(0,len(TreeForest))])
 	
-	wvecLearn = svm_func.SVM(SVM_XDATA, YData, 1, 0.001, 50, len(SVM_XDATA[0]))
+	wvecLearn = svm_func.SVM(SVM_XDATA, YData, 0.1, 0.01, 60, len(SVM_XDATA[0]))
 	#print wvecLearn
 	TestStruct = svm_func.SVM_TEST(TEST_XDATA, YTest, wvecLearn)
 	TrainingStruct = svm_func.SVM_TEST(SVM_XDATA, YData, wvecLearn)

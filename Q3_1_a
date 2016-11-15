@@ -1,0 +1,10 @@
+Training-Mistake Count:  59
+Training-Accuracy =  94.1 %
+Training - Precision Score =  0.925217391304
+Training - Recall Score =  0.970802919708
+Training - F1-Score =  0.947462154942
+Test-Mistake Count:  48
+Test-Accuracy=  91.9055649241 %
+Test - Precision Score =  0.900621118012
+Test - Recall Score =  0.947712418301
+Test - F1-Score =  0.923566878981

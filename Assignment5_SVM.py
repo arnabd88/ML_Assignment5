@@ -50,12 +50,28 @@ def Run_Q3_1():
 	#print wvecLearn
 	TestStruct = svm_func.SVM_TEST(XTest, YTest, wvecLearn)
 	TrainingStruct = svm_func.SVM_TEST(XData, YData, wvecLearn)
-	print "Test-Set size = ", len(XTest)
-	print "Data-Set Size = ", len(XData)
-	print "Test-MistakeCount = ", TestStruct[3]
-	print "Test-Accuracy = ", 100*float(len(XTest) - TestStruct[3])/len(XTest), "%"
-	print "Training-MistakeCount = ", TrainingStruct[3]
-	print "Training-Accuracy = ", 100*float(len(XData) - TrainingStruct[3])/len(XData), "%\n\n"
+	## print "Test-Set size = ", len(XTest)
+	## print "Data-Set Size = ", len(XData)
+	## print "Test-MistakeCount = ", TestStruct[3]
+	## print "Test-Accuracy = ", 100*float(len(XTest) - TestStruct[3])/len(XTest), "%"
+	## print "Training-MistakeCount = ", TrainingStruct[3]
+	## print "Training-Accuracy = ", 100*float(len(XData) - TrainingStruct[3])/len(XData), "%\n\n"
+	PrecisionScoreTrain = TrainingStruct[0]/float(TrainingStruct[0] + TrainingStruct[1])
+	RecallTrain = TrainingStruct[0]/float(TrainingStruct[0] + TrainingStruct[2])
+	F1Train = (2*PrecisionScoreTrain*RecallTrain)/float(PrecisionScoreTrain + RecallTrain)
+	print "Training-Mistake Count: ", TrainingStruct[3]
+	print "Training-Accuracy = ",  ((len(XData) - TrainingStruct[3])/float((len(XData))))*100 , "%"
+	print "Training - Precision Score = ", PrecisionScoreTrain
+	print "Training - Recall Score = ", RecallTrain
+	print "Training - F1-Score = ", F1Train
+	PrecisionScoreTest = TestStruct[0]/float(TestStruct[0] + TestStruct[1])
+	Recalltest = TestStruct[0]/float(TestStruct[0] + TestStruct[2])
+	F1test = (2*PrecisionScoreTest*Recalltest)/float(PrecisionScoreTest + Recalltest)
+	print "Test-Mistake Count: ", TestStruct[3]
+	print "Test-Accuracy= ",  ((len(XTest) - TestStruct[3])/(float((len(XTest)))))*100, "%"
+	print "Test - Precision Score = ", PrecisionScoreTest 
+	print "Test - Recall Score = ", Recalltest
+	print "Test - F1-Score = ", F1test
 
 
 def Run_Q3_2():
@@ -143,5 +159,5 @@ def Run_Q3_2():
 	
 				
 
-#Run_Q3_1()
-Run_Q3_2()
+Run_Q3_1()
+#Run_Q3_2()

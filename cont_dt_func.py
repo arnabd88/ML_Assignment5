@@ -159,7 +159,7 @@ def decideRoot(ExampleDict, AttrDict, k):
 	if(len(AttrDict['_AttrOrder_']) > k):
 		indexList = numpy.random.permutation(len(AttrDict['_AttrOrder_']))[0:k]
 	else:
-		indexList = AttrDict['_AttrOrder_']
+		indexList = numpy.random.permutation(len(AttrDict['_AttrOrder_']))
 	for f in indexList:
 		feat = AttrDict['_AttrOrder_'][f]
 		[IGv, csplit] = getIG(ExampleDict, AttrDict, feat, E_S[3])

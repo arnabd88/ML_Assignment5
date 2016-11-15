@@ -1,30 +1,45 @@
 1000 1000
 ############  Report for N =  5  ###################
-Training-Mistake Count:  38
-Training-Accuracy =  96.2 %
-Training - Precision Score =  0.961956521739
-Training - Recall Score =  0.96897810219
-Training - F1-Score =  0.965454545455
-Test-Mistake Count:  52
-Test-Accuracy=  91.2310286678 %
-Test - Precision Score =  0.931972789116
-Test - Recall Score =  0.895424836601
-Test - F1-Score =  0.913333333333
+Training-Mistake Count:  6
+Training-Accuracy =  99.4 %
+Training - Precision Score =  0.994525547445
+Training - Recall Score =  0.994525547445
+Training - F1-Score =  0.994525547445
+Test-Mistake Count:  83
+Test-Accuracy=  86.0033726813 %
+Test - Precision Score =  0.911439114391
+Test - Recall Score =  0.807189542484
+Test - F1-Score =  0.856152512998
 ========= End Report ==============================
 
 
 1000 1000
 ############  Report for N =  10  ###################
-Training-Mistake Count:  29
-Training-Accuracy =  97.1 %
-Training - Precision Score =  0.967567567568
-Training - Recall Score =  0.979927007299
-Training - F1-Score =  0.973708068903
-Test-Mistake Count:  54
-Test-Accuracy=  90.8937605396 %
-Test - Precision Score =  0.9375
-Test - Recall Score =  0.882352941176
-Test - F1-Score =  0.909090909091
+Training-Mistake Count:  0
+Training-Accuracy =  100.0 %
+Training - Precision Score =  1.0
+Training - Recall Score =  1.0
+Training - F1-Score =  1.0
+Test-Mistake Count:  66
+Test-Accuracy=  88.8701517707 %
+Test - Precision Score =  0.951127819549
+Test - Recall Score =  0.826797385621
+Test - F1-Score =  0.884615384615
+========= End Report ==============================
+
+
+1000 1000
+############  Report for N =  100  ###################
+Training-Mistake Count:  0
+Training-Accuracy =  100.0 %
+Training - Precision Score =  1.0
+Training - Recall Score =  1.0
+Training - F1-Score =  1.0
+Test-Mistake Count:  58
+Test-Accuracy=  90.2192242833 %
+Test - Precision Score =  0.959259259259
+Test - Recall Score =  0.846405228758
+Test - F1-Score =  0.899305555556
 ========= End Report ==============================
 
 

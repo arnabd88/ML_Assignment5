@@ -1,0 +1,59 @@
+2000 2000
+############  Report for N =  5  ###################
+Training-Mistake Count:  787
+Training-Accuracy =  60.65 %
+Training - Precision Score =  0.601525262154
+Training - Recall Score =  0.631
+Training - F1-Score =  0.615910200098
+Test-Mistake Count:  288
+Test-Accuracy=  52.0 %
+Test - Precision Score =  0.513513513514
+Test - Recall Score =  0.76
+Test - F1-Score =  0.612903225806
+========= End Report ==============================
+
+
+2000 2000
+############  Report for N =  10  ###################
+Training-Mistake Count:  773
+Training-Accuracy =  61.35 %
+Training - Precision Score =  0.603275705187
+Training - Recall Score =  0.663
+Training - F1-Score =  0.63172939495
+Test-Mistake Count:  291
+Test-Accuracy=  51.5 %
+Test - Precision Score =  0.510067114094
+Test - Recall Score =  0.76
+Test - F1-Score =  0.610441767068
+========= End Report ==============================
+
+
+2000 2000
+############  Report for N =  30  ###################
+Training-Mistake Count:  748
+Training-Accuracy =  62.6 %
+Training - Precision Score =  0.618198874296
+Training - Recall Score =  0.659
+Training - F1-Score =  0.637947725073
+Test-Mistake Count:  300
+Test-Accuracy=  50.0 %
+Test - Precision Score =  0.5
+Test - Recall Score =  0.676666666667
+Test - F1-Score =  0.57507082153
+========= End Report ==============================
+
+
+2000 2000
+############  Report for N =  100  ###################
+Training-Mistake Count:  684
+Training-Accuracy =  65.8 %
+Training - Precision Score =  0.666666666667
+Training - Recall Score =  0.632
+Training - F1-Score =  0.64887063655
+Test-Mistake Count:  304
+Test-Accuracy=  49.3333333333 %
+Test - Precision Score =  0.495024875622
+Test - Recall Score =  0.663333333333
+Test - F1-Score =  0.566951566952
+========= End Report ==============================
+
