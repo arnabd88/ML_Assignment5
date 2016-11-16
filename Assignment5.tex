@@ -43,14 +43,21 @@
   \caption{Space transformation for Xor to make linearly separable}
   \end{figure}
 
-  \part{2a} For $D_1 = \{x_1, x_2, x_3, x_5, x_7\}$, the linear classifier with the maximum margin will be parallel to the line joining $x_1$ and $x_3$, and the distance of this classifer will be equal from $x_1 and x_3$ on one side and $x_5$ on the other side.  Hence, the maximum possible margin for $D_1$ will be half the distance of $x_5$ from the line joining $x_1$ and $x_3$. The line joining $x_1,x_3$ is $x_1 - x_2 = 0$. Then, margin for $D_1$ will be: \newline
+  \part{2a} Let X denotes the x-axes and Y denote the y axes. \newline
+  The margin descriptions are pictorially described in Figure(2). \newline
+  For $D_1 = \{x_1, x_2, x_3, x_5, x_7\}$, the linear classifier with the maximum margin will be parallel to the line joining $x_1$ and $x_3$, and the distance of this classifer will be equal from $x_1 and x_3$ on one side and $x_5$ on the other side.  Hence, the maximum possible margin for $D_1$ will be half the distance of $x_5$ from the line joining $x_1$ and $x_3$. The line joining $x_1,x_3$ is $Y - X = 0$. Then, margin for $D_1$ will be: \newline
   \[D_{1_{marginMax}} = \dfrac{1}{2 \times \sqrt[2]{2}}\]
  
-    For $D_2 = \{ x_1, x_5, x_6, x_8\}$, the linear classifier with the maximum margin will be parallel to the line joining $x_5, x_6$, and the distance of this classifier will be equal from $x_5$ and $x_6$ on one side and $x_1$ on the other side. Hence, the maximum possible margin for $D_2$ will be half of the distance of $x_1$ from the line joining $x_5$ and $x_6$. The line joining $x_5, x_6$ is $\sqrt[2]{3}x_1 + x_2 - \sqrt[2]{3} = 0$. Then the margin for $D_2$ will be: \newline
+    For $D_2 = \{ x_1, x_5, x_6, x_8\}$, the linear classifier with the maximum margin will be parallel to the line joining $x_5, x_6$, and the distance of this classifier will be equal from $x_5$ and $x_6$ on one side and $x_1$ on the other side. Hence, the maximum possible margin for $D_2$ will be half of the distance of $x_1$ from the line joining $x_5$ and $x_6$. The line joining $x_5, x_6$ is $\sqrt[2]{3}X + Y - \sqrt[2]{3} = 0$. Then the margin for $D_2$ will be: \newline
     \[D_{2_{marginMax}} = \dfrac{\sqrt[2]{3}}{4} \]
 
-    For $D_3 = \{ x_3, x_4, x_5, x_7 \}$, the linear classifier with the maximum margin will be parallel to the line joining $x_4$ and $x_3$, and the distance of this classifier will be equal from $x_4$ and $x_3$ from one side and from $x_5$ on the other side. Hence, the maximum possible margin for $D_3$ will be half of the distance of $x_5$ from the line joining $x_3$ and $x_4$. The line joining $x_3$ and $x_4$ is $2x_1 - x_2 - 1 = 0$. Then the margin for $D_3$ will be: \newline
+    For $D_3 = \{ x_3, x_4, x_5, x_7 \}$, the linear classifier with the maximum margin will be parallel to the line joining $x_4$ and $x_3$, and the distance of this classifier will be equal from $x_4$ and $x_3$ from one side and from $x_5$ on the other side. Hence, the maximum possible margin for $D_3$ will be half of the distance of $x_5$ from the line joining $x_3$ and $x_4$. The line joining $x_3$ and $x_4$ is $2X - Y - 1 = 0$. Then the margin for $D_3$ will be: \newline
     \[ D_{3_{marginMax}} = \dfrac{1}{2\times \sqrt[2]{5}}\]
+   \begin{figure}[H]
+   \centering
+  \includegraphics[width=14cm, height=10cm]{Prob1pt2}
+  \caption{Max-Margins for $D_1, D_2, D_3$}
+  \end{figure}
 
     \part{2b}
     For finding the perceptron mistake bound, the mistake bound is given as $\leq \bigg ( \dfrac{R}{\gamma} \bigg )^2$, where is the farthest point from the origin. \newline
@@ -294,5 +301,7 @@
      \textbf {Test: } Precision = 0.58 \newline
      \textbf {Test: } Recall = 0.18 \newline
      \textbf {Test: } F1-Score = 0.27 \newline
+     
+     Thats all for now, check out the code !!
 
 \end{document}
