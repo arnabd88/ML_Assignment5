@@ -35,7 +35,7 @@
   \newcommand\HWNUM{4}
 
   \question{1}{Margins}
-  \part{1} For a xor function in two dimension of $x_{1},x_{2}$ and label $y$, the examples sets in the form of tuple $(x_1, x_2, y)$ are $(-1,-1,-1)$, $(-1,1,1)$, $(1,-1,1)$ and $(1,1,-1)$, where variables are boolean and takes $\{-1,1\}$. It is not linearly separable in the euclidean space. However, the transformation, $\phi$, of mapping $[x_1, x_2]$ to $[x_1, x_1x_2]$ makes it linearly separable in which the datapoints now $(x_1, x_1x_2, y)$ becomes $(-1,1,-1)$, $(-1,-1,1)$, $(1,-1,1)$ and $(1,1,-1)$. The line $x_1x_2=0$ is a separating classifier. SInce $x_1x_2=0$ is equaidistant from all the 4 points in the transformed space, it gives the maximum margin, which is the distance of any of the points(since equidistant) from this line. and equal to \textbf {1 unit}.  The linear classifier in the transformed space when mapped back to the original euclidean space , will be combination of the lines $x_1=0$ and $x_2=0$, as shown in Figure-1(c). This is because in the transformed space, since $x_1x_2=0$ means that line satisfies all points which has $x_1=0$ or/and $x_2=0$, hence in the euclidean space it is a combination of both. \newline
+  \part{1} For a xor function in two dimension of $x_{1},x_{2}$ and label $y$, the examples sets in the form of tuple $(x_1, x_2, y)$ are $(-1,-1,-1)$, $(-1,1,1)$, $(1,-1,1)$ and $(1,1,-1)$, where variables are boolean and takes $\{-1,1\}$. It is not linearly separable in the euclidean space. However, the transformation, $\phi$, of mapping $[x_1, x_2]$ to $[x_1, x_1x_2]$ makes it linearly separable in which the datapoints now $(x_1, x_1x_2, y)$ becomes $(-1,1,-1)$, $(-1,-1,1)$, $(1,-1,1)$ and $(1,1,-1)$. The line $x_1x_2=0$ is a separating classifier. Since $x_1x_2=0$ is equaidistant from all the 4 points in the transformed space, it gives the maximum margin, which is the distance of any of the points(since equidistant) from this line. and equal to \textbf {1 unit}.  The linear classifier in the transformed space when mapped back to the original euclidean space , will be combination of the lines $x_1=0$ and $x_2=0$, as shown in Figure-1(c). This is because in the transformed space, since $x_1x_2=0$ means that line satisfies all points which has $x_1=0$ or/and $x_2=0$, hence in the euclidean space it is a combination of both. \newline
 
   \begin{figure}[H]
    \centering
@@ -59,7 +59,7 @@
     For $D_3$, farthest point is $x_7$, so $R=\dfrac{3}{2}$ and $\gamma = \dfrac{1}{2\times \sqrt[2]{5}}$, perceptron mistake bound for $D_3$ = 45. \newline
     $D_3$ has the greatest mistake bound. \newline
 
-    \part{2c} A higher mistake bound indicates how well the classifier can fit the training data by making only this bounded number of mistakes. Hence, a low mistake bound will means the classifier fits the training data quickly. However, that provides no guarantees on the test data. Since the perceptron learns by making mistakes, hence a lower number of mistakes indicate that the learning performed by the perceptron has been less, and hence its predictive power intuitively reduces on the test data. To put it simply, a classifier learns less if it makes less number of mistakes because that is its only entry point towards learning and updates. Hence, the classifier with a higher mistakes bound is easier to learn and the one with a small mistake bound is difficult to learn. Thus the ranking in order of ease of ranking will be $D_3$, $D_1$, $D_2$ . \newline
+    \part{2c} A higher mistake bound indicates how well the classifier can fit the training data by making only this bounded number of mistakes. Hence, a low mistake bound will mean the classifier fits the training data quickly. However, that provides no guarantees on the test data. Since the perceptron learns by making mistakes, hence a lower number of mistakes indicate that the learning performed by the perceptron has been less, and hence its predictive power consequently is expected to reduce on the test data. To put it simply, a classifier learns less if it makes less number of mistakes because that is its only entry point towards learning and updates. Hence, the classifier with a higher mistakes bound is easier to learn and the one with a small mistake bound is difficult to learn. Thus the ranking in order of ease of ranking will be $D_3$, $D_1$, $D_2$ . \newline
 
     \question{2}{Kernels}
     \part{1a} Given valid kernels , $K_1(x,z)$ and $K_2(x,z)$, we need to show the product of these two kernels is also a kernel. For the defined space $x_1, x_2, \dots, x_n \in S$, we define the respective Gram matrices as: \newline
@@ -93,31 +93,33 @@
 
     \part{2a} To Prove: Polynomial over a kernel constructed using positive coefficients is also a kernel.\newline
     If we can show that the sum of kernels with positive coefficients is a kernel, then using this result and the result of previous question(2.1.a), we can conclude that Polynomial over a kernel is also a kernel. \newline
-    Given $K_1(x,z)$ and $K_2(x,z)$ are kernels, we define $K(x,z) = \alpha K_1(x,z) + \beta K_2(x,z)$ and show that K is a kernel. \newline
-    Suppose $K_1$ has its feature map, $\phi_1$, such that it is defined as $K_1(x,z) = \phi_1^T(x)\phi_1(z)$.
-    Suppose $K_2$ has its feature map, $\phi_2$, such that it is defined as $K_1(x,z) = \phi_2^T(x)\phi_2(z)$. Then we have , \newline
-    \[K(x,z) = \alpha K_1(x,z) + \beta K_2(x,z) = <\sqrt[2]{\alpha}\phi_1(x), \sqrt[2]{\alpha}\phi_1(z)> + <\sqrt[2]{\beta}\phi_1(x), \sqrt[2]{\beta}\phi_1(z)>\]
-    \[K(x,z) = <[\sqrt[2]{\alpha}\phi_1(x), \sqrt[2]{\beta}\phi_2(x)], [\sqrt[2]{\alpha}\phi_1(z), \sqrt[2]{\beta}\phi_2(z)]>\]
+    Given $K_1(x,z)$ and $K_2(x,z)$ are kernels, we define $K(x,z) = a K_1(x,z) + b K_2(x,z)$ and show that K is a kernel. \newline
+    Suppose $K_1$ has its feature map, $\phi_1$, such that it is defined as $K_1(x,z) = \phi_1^T(x)\phi_1(z)$ = $<\phi_1(x), \phi_1(z)>$.
+    Suppose $K_2$ has its feature map, $\phi_2$, such that it is defined as $K_1(x,z) = \phi_2^T(x)\phi_2(z)$.=$<\phi_2(x), \phi_2(z)>$  \newline
+    where, $<c,d>$ indicates the dot product of vectors c and d, that is $c^Td$. \newline
+    Then we have , \newline
+    \[K(x,z) = a K_1(x,z) + b K_2(x,z) = <\sqrt[2]{a}\phi_1(x), \sqrt[2]{a}\phi_1(z)> + <\sqrt[2]{b}\phi_1(x), \sqrt[2]{b}\phi_1(z)>\]
+    \[K(x,z) = <[\sqrt[2]{a}\phi_1(x), \sqrt[2]{b}\phi_2(x)], [\sqrt[2]{a}\phi_1(z), \sqrt[2]{b}\phi_2(z)]>\]
 
     Which means $K(x,z)$ can be expresses as an inner product . Hence, K is an kernel.
-    Next, when we have a polynomial over a kernel constrcuted using positive coefficients, then the terms of the polynomial are product of kernels and these products are summed up to produce the final polynomial. Since, we have already proved that the product of kernels is a kernel, and sum of kernels with positive(else $\sqrt[2]{\alpha}$ will be imaginary) coefficients are kernels, hence overall it is a kernel. (Proved). \newline
+    Next, when we have a polynomial over a kernel constrcuted using positive coefficients, then the terms of the polynomial are product of kernels and these products are summed up to produce the final polynomial. Since, we have already proved that the product of kernels is a kernel, and sum of kernels with positive(else $\sqrt[2]{a}$ will be imaginary) coefficients are kernels, hence overall it is a kernel. (Proved). \newline
 
     \part{2} Given two examples $x \in R^2$ and $z \in R^2$, \textbf {Prove} the following is a kernel.
     \[K(x,z) = 15(x^Tz)^2 \exp(-||x-z||^2)\]
     Let $K_1(x,z) = 15(x^Tz)^2$ and $K_2 = \exp(-||x-z||^2)$. We already know from the previous results that the product of two kernels is a kernel. Hence, if we can separately prove that $K_1$ and $K_2$ are kernels, then that implies K is a kernel as well. \newline
-    \textbf {Proof: $K_1$ is a kernel: } A function is a kernel if it corresponds to an inner product in some feature space. Since, $x^Tz$ is an inner product of the vectors $x$ and $z$ , hence $A = x^Tz$ it is a linear kernel. Since , we have already showed that product of two kernels is a kernels, hence $A^2 = (x^Tz)(x^Tz) = (x^Tz)^2$ is also a kernel. Now the result of a kernel multiplied by a non-negative constant, is a kernel. Since $15>0$, and $(x^Tz)^2$ is a kernel, hence $15(x^Tz)^2$ is a kernel. \newline
-    \textbf {Proof: $K_1$ is a kernel: } Mercer's condition says, K is a valid if for every finite set ${x_1, x_2, \dots, x_n}$, for any choice of real valued $c_1, c_2, \dots$, if $\sum_i \sum_j K(x_i,x_j) \geq 0$. Choosing $c_i,c_j$ to be positive real values, then for any pair of examples $x_i.x_j$, for $K_1$, we can write: $\sum_i \sum_j c_i c_j 15(x^Tz)^2$, and since their is a square term involved with positive coefficients, hence its value is greater than equal to 0. Thus , $K_1$ is a valid kernel. \newline
+    \textbf {Proof: $K_1$ is a kernel: } A function is a kernel if it corresponds to an inner product in some feature space. Since, $x^Tz$ is an inner product of the vectors $x$ and $z$ , hence $A = x^Tz$ it is a linear kernel. Since , we have already showed that product of two kernels is a kernel, hence $A^2 = (x^Tz)(x^Tz) = (x^Tz)^2$ is also a kernel. Now the result of a kernel multiplied by a non-negative constant, is a kernel. Since $15>0$, and $(x^Tz)^2$ is a kernel, hence $15(x^Tz)^2$ is a kernel. \newline
+    
     \textbf {Proof: $K_2$ is a kernel: }. We can break down $K_2$ as follows:
     \[K_2(x,z) = \exp(-||x-z||^2) = \exp(-(x-z)^T(x-z)) = \exp(-<x-z, x-z>) = \exp(-(<x,x-z> - <z,x-z>)) \]
     \[K_2(x,z) = \exp(-(<x,x> - <x,z> - <z,x> + <z,z>)) = \exp(-(||x||^2 + ||z||^2 - 2<x,z>))\]
-    \[K_2(x,z) = \exp(-(||x||^2 + ||z||^2)) \exp(2<x,z>) = C\exp(2<x,z>)\]
-    where C = $\exp(||x||^2 + ||z||^2)$ is a constant. Then expanding the exponential we get:
+    \[K_2(x,z) = \exp(-(||x||^2 + ||z||^2)) \exp(2<x,z>) = B\exp(2<x,z>)\]
+    where B = $\exp(||x||^2 + ||z||^2)$ is a constant. Then expanding the exponential in taylor's expansion we get:
     \begin{equation}
-    K_2(x,z) = C \sum_{n=0}^\infty \dfrac{<x,z>^n}{n!}
+    K_2(x,z) = B \sum_{n=0}^\infty \dfrac{<x,z>^n}{n!}
     \end{equation}
 
-    Thus, we see that $K_2$ is formed by an infinite sum over polynomial kernels, which are further derived from the product of linear kernels$x^Tz$. Since sum and product of kernels results in a kernel as proved earlier, hence $K_2$ is a kernel. \newline
-    Since, $K$ is formed as the product of $K_1$ and $K_2$, hence $K_1$ is a valid kernel.(Proved). \newline
+    Thus, we see that $K_2$ is formed by an infinite sum over polynomial kernels, which are further derived from the product of linear kernels $x^Tz$. Since sum and product of kernels results in a kernel as proved earlier, hence $K_2$ is a kernel. \newline
+    Since, $K$ is formed as the product of $K_1$ and $K_2$, hence $K$ is a valid kernel.(Proved). \newline
 
     \part{3} Prove that the Gaussian kernel can be written down as the inner product of an feature space with infinite dimension. 
     \[K(x,z) = \exp(\dfrac{-||x-z||^2}{2{\sigma}^2})\]
@@ -128,14 +130,15 @@
     and their corresponding transformations be $\phi$ , $\phi_1$ and $\phi_2$ respectively. This implies that $\phi$ is defined such that it forms vectors of the form:
     \[ \phi(x) = (\phi_1(x), \phi_2(x))\]
     such that(similar to the proof for sum over kernels)
-   \[ <\phi(x),\phi(z)> = <\phi_1(x), \phi_1(z)> + <\phi_2(x), \phi_2(z)>\]
+   \[ <\phi(x),\phi(z)>  =  <\phi_1(x), \phi_1(z)> + <\phi_2(x), \phi_2(z)>\]
    In the euclidean space, thus $\phi(x)$ is the vector formed by appending the components of $\phi_2(x)$ to $\phi_1(x)$, and then:
-   \[<\phi(x), \phi(z)> = \sum_{i=1}^{dim(K_1)} \phi_{1,i}(x)\phi_{1,i}(z) + \sum_{j=1}^{dim(K_2)} \phi_{1,j}(x)\phi_{1,j}(z)\]
+   \[<\phi(x), \phi(z)>  =  \sum_{i=1}^{dim(K_1)} \phi_{1,i}(x)\phi_{1,i}(z) + \sum_{j=1}^{dim(K_2)} \phi_{1,j}(x)\phi_{1,j}(z)\]
    \[ = \sum_{i=1}^{dim(K_1)+dim(K_2)} \phi_{i}(x)\phi_{j}(z)\]
 
    Since $K_1$ and $K_2$ are infinite sum over kernel polynomials from equation(2), hence $K$ can be written down as the inner product of a feature space with infinite dimension as shown above. Here, $K$ represents the RBF, while $K_1$ and $K_2$ represents the infinite sums RBF is composed off as in equation(2). \newline
 
    \question{3.1}{Support Vector Machines}
+   Re-runs will give similar results, except in cases where the random feature selection is used, however results will remain extremely close and not differ by significant margin. \newline
    \part{1} Implementation of SVM with $C=1$ and $\gamma_0 = 0.01$. \newline
    DataSet = Handwriting \newline
    Training Accuracy = 94.1\% \newline
@@ -252,8 +255,8 @@
   %\label{table:nonlin}
   \end{longtable}
 
-  \part{2} For implementing the ensemble method on the madelon dataset, we need to discretize the data from the continuous domain. For this we choose the following split method. At every node, we select k random features. For each feature f, we collect its values across the examples and its labels. Then this map list is sorted, and split points are identified wherever the label changes sign. These split points are identified as a threshold value. Based on this identified split points, we calculate the information gain(based on entrophy) and choose the split for that feature that provided the best information gain, and that infromation gain is the representative of that feature in the decision function that needs to make a decision across the randomly selected k features.  So, once the split splot for each feature has been identified, the feature with the best split/cut (highest information gain), is chosen as the feature to split upon. Once, this decision  has been made,the branching from that node has two branches, one for samples with the corresponding value greater than or equal to threshold and the other for less than threshold. Then at the node in the next level, we have atleast one less feature to split from. We again select random k features, for the duration the available features to split on is greater than or equal to k. Once the available features to split on becomes equal to k, we random selection goes off and we select all the features. \newline
-  The choice of the number of examples(m) we take to train each decision tree plays a crucial role here. Our experiments show that with higher values of m, the trees overfit the data and training accuracy shoots up, while the test accuracy goes down. This is precisely because we developed \textbf {unpruned} trees, which will fit the entire training set. To reduce overfitting, we decided to limit the value of 'm' samples that goes to each decision tree. For $n$ being the number of decision trees, and $D$ being the length of the input data set, we chose $m = \dfrac{D}{p*n}$. The m samples are chosen randomly for each decision tree and with replacement. Our trials with $p=1,2,5$, shows that around $p=1,2$ results are fairly optimal. With $p=5$, the results starts to drift away indicating underfitting since we are not supplying enough examples to train upon. Besides, we have tried with setting $m={25\%, 50\%, 70\%}$ of the data set. While $25\%$ gave a similar accuracy as $p=1$ for n=5, that is expected since they both points towards similar sample size. Increasing the percentage of the data-set in the sample improved training-accuracy to around $80\%$ while test-accuracy drops off to lower 40's, indicating too much overfitting. \newline
+  \part{2} For implementing the ensemble method on the madelon dataset, we need to discretize the data from the continuous domain. For this we choose the following split method. At every node, we select k random features. For each feature f, we collect its values across the examples and its labels. Then this map list is sorted, and split points are identified wherever the label changes sign. These split points are identified as a threshold value. Based on this identified split points, we calculate the information gain(based on entrophy) and choose the split for that feature that provided the best information gain, and that infromation gain is the representative of that feature in the decision function that needs to make a decision across the randomly selected k features.  So, once the split splot for each feature has been identified, the feature with the best split/cut (highest information gain), is chosen as the feature to split upon. Once, this decision  has been made,the branching from that node has two branches, one for samples with the corresponding value greater than or equal to threshold and the other for less than threshold. Then at the node in the next level, we have atleast one less feature to split from. We again select random k features, for the duration the available features to split on is greater than or equal to k. Once the available features to split on becomes equal to k, the random selection goes off and we select all the features. \newline
+  The choice of the number of examples(m) we take to train each decision tree plays a crucial role here. Our experiments show that with higher values of m, the trees overfit the data and training accuracy shoots up, while the test accuracy goes down. This is precisely because we developed \textbf {unpruned} trees, which will fit the entire training set. To reduce overfitting, we decided to limit the value of 'm' samples that goes to each decision tree. For $n$ being the number of decision trees, and $D$ being the length of the input data set, we choose $m = \dfrac{D}{p*n}$. The m samples are chosen randomly for each decision tree and with replacement. Our trials with $p=1,2,5$, shows that around $p=1,2$ results are fairly optimal. With $p=5$, the results starts to drift away indicating underfitting since we are not supplying enough examples to train upon. Besides, we have tried with setting $m={25\%, 50\%, 70\%}$ of the data set. While $25\%$ gave a similar accuracy as $p=1$ for n=5, that is expected since they both points towards almost similar sample size. Increasing the percentage of the data-set in the sample improved training-accuracy to around $80\%$ while test-accuracy drops off to lower 40's, indicating too much overfitting. \newline
 
   Values used for $(C,\gamma_0) = (1,0.01)$. This is the best we got after many trial runs for accuracy. \newline
  \begin{longtable}{c|c|c|c|c|c|c|c|c|c}
