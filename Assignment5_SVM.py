@@ -158,6 +158,11 @@ def Run_Q3_2():
 
 	
 				
-
-Run_Q3_1()
-#Run_Q3_2()
+	test_index = sys.argv.index('-test')
+if('-q31' in sys.argv):
+	Run_Q3_1()
+elif('-q32' in sys.argv):
+	Run_Q3_2()
+else:
+	print "Incorrect Parameter combinations!!... Exiting!\n"
+	sys.exit()
